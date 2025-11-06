@@ -5,6 +5,8 @@ using ModelingToolkit
 using MethodOfLines
 using DomainSets
 
+using GLMakie
+
 R = ustrip(uconvert(u"(bar*m^3)/(mol*K)", 8.314u"J/(mol*K)"))
 cross_sect_area = ustrip(uconvert(u"m^2", 10u"m^2"))
 ρ_bulk = ustrip(uconvert(u"kg/m^3", 1000u"kg/m^3"))
@@ -259,11 +261,80 @@ debug_callback = DiscreteCallback((u, t, integrator) -> true, print_debug_info)
 sol = solve(prob, Rosenbrock23(), callback = debug_callback)
 
 
-t_grid = sol[t]
+t_grid = sol.t
 z_grid = sol[z]
 x_grid = sol[x]
 
 
+#Below was coded by Gemini just to get an example for how to use it for future work
+# 1. Create an Observable for the TIME INDEX
+time_idx = Observable(1)
+
+F_CH3OH_data = sol[F_CH3OH(t, z)]
+F_H2_data    = sol[F_H2(t, z)]
+F_H2O_data   = sol[F_H2O(t, z)]
+F_CO_data    = sol[F_CO(t, z)]
+F_CO2_data   = sol[F_CO2(t, z)]
+
+# Determine the time range for the animation
+desired_max_time = 200000
+max_time_idx = argmin(abs.(t_grid .- desired_max_time))
+time_indices_to_animate = 1:max_time_idx
+
+fig = Figure(size = (800, 600))
+
+title_str = @lift("Reactor Profile at t = $(round(t_grid[$time_idx], digits=1)) s")
+ax = Axis(fig[1, 1],
+          xlabel = "Reactor Length (m)",
+          ylabel = "Molar Flow (mol/s)",
+          title = title_str)
+
+# 2. "Lift" the data for each species to be plotted.
+# The `$` tells @lift to use the *value* of the Observable.
+# When `time_idx` changes, these y-values will automatically update.
+y_CH3OH = @lift(F_CH3OH_data[$time_idx, :])
+y_H2    = @lift(F_H2_data[$time_idx, :])
+y_H2O   = @lift(F_H2O_data[$time_idx, :])
+y_CO    = @lift(F_CO_data[$time_idx, :])
+y_CO2   = @lift(F_CO2_data[$time_idx, :])
+
+# 3. Plot the lifted (reactive) data
+# The x-data (z_grid) is static, but the y-data is an Observable.
+lines!(ax, z_grid, y_CH3OH, label = "CH3OH", linewidth=2)
+lines!(z_grid, y_H2,    label = "H2",    linewidth=2)
+lines!(z_grid, y_H2O,   label = "H2O",   linewidth=2)
+lines!(z_grid, y_CO,    label = "CO",    linewidth=2)
+lines!(z_grid, y_CO2,   label = "CO2",   linewidth=2)
+
+# Add a legend
+axislegend(ax)
+
+# Optional: Fix the y-axis limits to prevent them from jumping around during the animation
+# Find the global min/max over the animated time range and add some padding.
+all_data_subset = vcat(
+    F_CH3OH_data[time_indices_to_animate, :],
+    F_H2_data[time_indices_to_animate, :],
+    F_H2O_data[time_indices_to_animate, :],
+    F_CO_data[time_indices_to_animate, :],
+    F_CO2_data[time_indices_to_animate, :]
+)
+ymin = minimum(all_data_subset)
+ymax = maximum(all_data_subset)
+GLMakie.ylims!(ax, ymin - 0.1 * abs(ymin), ymax + 0.1 * abs(ymax))
+
+# Display the initial figure
+display(fig)
+
+framerate = 30
+rm("C://Users//wille//Desktop//Legacy-Projects-And-Code-Will-Martin//Julia Projects//reactor_animation.mp4", force = true)
+record(fig, output_file, time_indices_to_animate; framerate = framerate) do i
+    # This block is executed for each frame.
+    # All we need to do is update the time index.
+    time_idx[] = i
+end
+
+
+"""
 desired_max_time = 200000
 max_time_idx = argmin(abs.(t_grid .- desired_max_time))
 time_at_max = t_grid[max_time_idx] #* 1.0u"s"
@@ -310,3 +381,4 @@ plot!(z_slice, sol[F_CO(t, z)][max_time_idx, z_s:z_e], label="CO")
 sol[F_CO(t, z)][max_time_idx, z_s:z_e]
 plot!(z_slice, sol[F_CO2(t, z)][max_time_idx, z_s:z_e], label="CO2")
 sol[F_CO2(t, z)][max_time_idx, z_s:z_e]
+"""
