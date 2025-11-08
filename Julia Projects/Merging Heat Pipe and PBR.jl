@@ -107,7 +107,6 @@ eq_T = Dt(T(t, z)) ~ (T_j(t, x) - T(t, z)) #this does work by the way but I'm us
 #eq_T = Dt(T(t, z)) ~ 0.0
 
 #LOOK HERE: since T_j influences the temperature of the reactor, T_j cannot be defined later, this is a pretty big limitation
-#
 
 #PBR eqs
 eqs1 = [eq_F_CH3OH, eq_F_H2O, eq_F_CO, eq_F_H2, eq_F_CO2, eq_P, eq_T]
@@ -128,9 +127,16 @@ k = ustrip(uconvert(u"W/(m*K)", 401u"W/(m*K)"))
 
 rho = ustrip(uconvert(u"g/m^3", 8960u"kg/m^3"))
 #P / (461.5 * T_j(t, x))
-heat_input = 10000.0
+U = 1
+a = 0.1
+CH3OH_Cm = ustrip(uconvert(u"(bar*m^3)/(mol*K)", 65.2u"J/(mol*K)"))
+H2O_Cm = ustrip(uconvert(u"(bar*m^3)/(mol*K)", 30u"J/(mol*K)"))
+CO_Cm = ustrip(uconvert(u"(bar*m^3)/(mol*K)", 30u"J/(mol*K)"))
+H2_Cm = ustrip(uconvert(u"(bar*m^3)/(mol*K)", 46u"J/(mol*K)"))
+CO2_Cm = ustrip(uconvert(u"(bar*m^3)/(mol*K)", 36u"J/(mol*K)"))
+heat_input = (U*a*(T(t, z) - T_j(t, x))) / (F_CH3OH(t, z) * CH3OH_Cm + F_H2O(t, z) * H2O_Cm + F_CO(t, z) * CO2_Cm + F_H2(t, z) * H2_Cm + F_CO2(t, z) * CO2_Cm)
 
-T_eq = rho * Cp * Dt(T_j(t, x)) ~ k * Dxx(T_j(t, x)) + heat_input
+T_eq = rho * Cp * Dt(T_j(t, x)) ~ k * Dxx(T_j(t, x)) + heat_input + 1000
 
 eqs2 = [T_eq]
 #END of heat pipe system
@@ -171,7 +177,7 @@ eqs2 = [T_eq]
 eqs = vcat(eqs1, eqs2)
 
 t_start = 0
-t_end = 200000.0
+t_end = 20000000.0
 
 z_min = 0
 z_max = 1
@@ -199,8 +205,8 @@ bcs = [
     T(t, z_min) ~ 573.0,
 
     #below is for heat pipe BCS
-    T_j(t_start, x) ~ 300,
-    T_j(t, x_min) ~ T(t, x_max), #this actually works!
+    T_j(t_start, x) ~ 573.0,
+    T_j(t, 0.5) ~ T(t, z_max), #this actually works!
     #currently T_j(t, x_min) ~ T(t, 0.5) doesn't work - this needs to be resolved
         # The only way I could see of solving this is to hack it in such a way that the reactor is split in two the boundary conditions are connected again and then we pull from that interface
 ]
@@ -275,9 +281,10 @@ F_H2_data    = sol[F_H2(t, z)]
 F_H2O_data   = sol[F_H2O(t, z)]
 F_CO_data    = sol[F_CO(t, z)]
 F_CO2_data   = sol[F_CO2(t, z)]
+temp_data    = sol[T(t, z)]
 
 # Determine the time range for the animation
-desired_max_time = 200000
+desired_max_time = t_end
 max_time_idx = argmin(abs.(t_grid .- desired_max_time))
 time_indices_to_animate = 1:max_time_idx
 
@@ -297,36 +304,55 @@ y_H2    = @lift(F_H2_data[$time_idx, :])
 y_H2O   = @lift(F_H2O_data[$time_idx, :])
 y_CO    = @lift(F_CO_data[$time_idx, :])
 y_CO2   = @lift(F_CO2_data[$time_idx, :])
+temp_reactor   = @lift(temp_data[$time_idx, :])
+
 
 # 3. Plot the lifted (reactive) data
 # The x-data (z_grid) is static, but the y-data is an Observable.
 lines!(ax, z_grid, y_CH3OH, label = "CH3OH", linewidth=2)
-lines!(z_grid, y_H2,    label = "H2",    linewidth=2)
-lines!(z_grid, y_H2O,   label = "H2O",   linewidth=2)
-lines!(z_grid, y_CO,    label = "CO",    linewidth=2)
-lines!(z_grid, y_CO2,   label = "CO2",   linewidth=2)
+lines!(ax, z_grid, y_H2,    label = "H2",    linewidth=2)
+lines!(ax, z_grid, y_H2O,   label = "H2O",   linewidth=2)
+lines!(ax, z_grid, y_CO,    label = "CO",    linewidth=2)
+lines!(ax, z_grid, y_CO2,   label = "CO2",   linewidth=2)
+ax_temp = Axis(fig[1, 1],
+               ylabel = "Temperature (K)",
+               yaxisposition = :right)
+hidexdecorations!(ax_temp)
+lines!(ax_temp, temp_reactor,   label = "Temperature",   linewidth=2)
+
 
 # Add a legend
 axislegend(ax)
 
 # Optional: Fix the y-axis limits to prevent them from jumping around during the animation
 # Find the global min/max over the animated time range and add some padding.
-all_data_subset = vcat(
+flow_data_subset = vcat(
     F_CH3OH_data[time_indices_to_animate, :],
     F_H2_data[time_indices_to_animate, :],
     F_H2O_data[time_indices_to_animate, :],
     F_CO_data[time_indices_to_animate, :],
     F_CO2_data[time_indices_to_animate, :]
 )
-ymin = minimum(all_data_subset)
-ymax = maximum(all_data_subset)
-GLMakie.ylims!(ax, ymin - 0.1 * abs(ymin), ymax + 0.1 * abs(ymax))
+flow_ymin = minimum(flow_data_subset)
+flow_ymax = maximum(flow_data_subset)
+GLMakie.ylims!(ax, flow_ymin - 0.1 * abs(flow_ymin), flow_ymax + 0.1 * abs(flow_ymax))
+
+# For temperature:
+temp_ymin = minimum(temp_data[time_indices_to_animate, :])
+temp_ymax = maximum(temp_data[time_indices_to_animate, :])
+GLMakie.ylims!(ax_temp, temp_ymin - 0.1 * abs(temp_ymin), temp_ymax + 0.1 * abs(temp_ymax))
 
 # Display the initial figure
 display(fig)
 
+for i in time_indices_to_animate
+    time_idx[] = i  # Update the observable
+    sleep(0.01)     # Pause to control the speed
+end
+
 framerate = 30
 rm("C://Users//wille//Desktop//Legacy-Projects-And-Code-Will-Martin//Julia Projects//reactor_animation.mp4", force = true)
+output_file = "C://Users//wille//Desktop//Legacy-Projects-And-Code-Will-Martin//Julia Projects//reactor_animation.mp4"
 record(fig, output_file, time_indices_to_animate; framerate = framerate) do i
     # This block is executed for each frame.
     # All we need to do is update the time index.
