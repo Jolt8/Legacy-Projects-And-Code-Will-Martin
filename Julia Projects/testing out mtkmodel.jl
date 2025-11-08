@@ -3,7 +3,6 @@ using Plots
 
 using ModelingToolkit
 
-
 @variables W
 
 @connector function FlowPort(; species::Vector{Symbol}, name) 
