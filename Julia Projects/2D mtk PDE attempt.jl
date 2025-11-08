@@ -1,6 +1,7 @@
 using ModelingToolkit
 using DifferentialEquations
 using Plots
+using GLMakie
 
 import ModelingToolkit: t_nounits as t, D_nounits as D
 
@@ -89,83 +90,75 @@ end
     end
 end
 
-# Now, build the 1D PDE system (the rod) by connecting them!
-n = 10
-"""
-# Instantiate all the components
-@named left_boundary = SomeHeatSource(Q_flow_fixed = 5.0)
-@named right_boundary = SomeFixedTemperature(T_fixed = 293.15)
-nodes = []
-for i in 1:n
-    node = push!(nodes, HeatCapacitor(name=Symbol("node", i), C=1/n))
-end
+rows = 4
+cols = 5
+n_nodes = rows * cols
 
-conductors = []
-for i in 1:n-1
-    push!(conductors, ThermalConductor(name=Symbol("cond", i), G=n))
-end
+nodes = [HeatCapacitor(name=Symbol("node_", i, "_", j), C=1/n_nodes) for i in 1:rows, j in 1:cols]
 
-# 2. Create connections programmatically
+h_conds = [ThermalConductor(name=Symbol("h_cond_", i, "_", j)) for i in 1:rows, j in 1:(cols-1)]
+v_conds = [ThermalConductor(name=Symbol("v_cond_", i, "_", j)) for i in 1:(rows-1), j in 1:cols]
+
+# Add boundary condition components
+left_bcs = [SomeHeatSource(name=Symbol("heat_source_", i)) for i in 1:rows]
+right_bcs = [SomeFixedTemperature(T_fixed=293.15, name=Symbol("fixed_temp_", i)) for i in 1:rows]
+
 connections = Equation[]
-# Connect internal nodes and conductors
-for i in 1:(n-1)
-    push!(connections, connect(nodes[i].port, conductors[i].port_a))
-    push!(connections, connect(conductors[i].port_b, nodes[i+1].port))
-end
-# Connect boundaries
-push!(connections, connect(left_boundary.port, nodes[1].port))
-push!(connections, connect(right_boundary.port, nodes[n].port))
 
-# 3. Create the ODESystem
-all_systems = vcat(nodes, conductors, left_boundary, right_boundary)
-@named rod = ODESystem(connections, t, systems=all_systems)
-"""
-#We should probably get the function below to work to ensure that PDE modeling is actually viable
-@mtkmodel HeatRod begin
-    @components begin
-        nodes = [HeatCapacitor(name=Symbol("node", i), C=1/n) for i in 1:n]
-        conductors = [ThermalConductor(name=Symbol("cond", i), G=n) for i in 1:(n-1)]
+[push!(connections, connect(nodes[i, j].port, h_conds[i, j].port_a)) for i in 1:rows, j in 1:(cols-1)]
+[push!(connections, connect(h_conds[i, j].port_b, nodes[i, j+1].port)) for i in 1:rows, j in 1:(cols-1)]
 
-        # Add boundary condition components
-        left_boundary = SomeHeatSource(name=Symbol("left bound"))
-        right_boundary = SomeFixedTemperature(T_fixed=293.15, name=Symbol("right bound")) # 20 °C
-    end
-    
-    @equations begin
-        #This loop doesn't work because it says that it cannot convert the loop that's type nothing into an equation
-        #Nevermind, you just have to do this instead of a for i in 1:(n-1) ... end 
-        [connect(nodes[i].port, conductors[i].port_a) for i in 1:(n-1)]
-        [connect(conductors[i].port_b, nodes[i+1].port) for i in 1:(n-1)]
-        
-        # Connect the ends of the rod to the boundary conditions
-        connect(left_boundary.port, nodes[1].port)
-        connect(right_boundary.port, nodes[n].port)
-    end
-end
+[push!(connections, connect(nodes[i, j].port, v_conds[i, j].port_a)) for i in 1:(rows-1), j in 1:cols]
+[push!(connections, connect(v_conds[i, j].port_b, nodes[i+1, j].port)) for i in 1:(rows-1), j in 1:cols]
+
+[push!(connections, connect(left_bcs[i].port, nodes[i, 1].port)) for i in 1:rows]
+[push!(connections, connect(right_bcs[i].port, nodes[i, cols].port)) for i in 1:rows]
 
 # --- Simulation Setup ---
+eqs_total = System[]
+all_systems = vcat(
+    vec(nodes),
+    vec(h_conds),
+    vec(v_conds),
+    vec(left_bcs),
+    vec(right_bcs)
+)
+all_systems
 
-@named rod = HeatRod()
+@named rod = ODESystem(connections, t, systems=all_systems)
 
-# Create a system and simplify the equations
-sys = structural_simplify(rod)
+sys = structural_simplify(rod)  
 
-# Define the simulation time span
 tspan = (0.0, 10.0)
 
-# Create an ODEProblem
 prob = ODEProblem(sys, [], tspan)
 
-# Solve the problem
 sol = solve(prob)
 
-# --- Plotting Results ---
+initial_temps = sol.u[1]
+final_temps = sol.u[end]
+T_min = minimum(initial_temps)
+T_max = maximum(final_temps)
 
-# Extract the temperature variables for each node
-#temp_vars = [rod.nodes[i].T for i in 1:10]
+fig = Figure(size = (800, 700))
+ax = Axis3(fig[1, 1],
+    title = "Temperature Distribution in 2D Heat Plate",
+    xlabel = "Column (X)",
+    ylabel = "Row (Y)",
+    zlabel = "Temperature (K)"
+)
 
-# Plot the solution
-vars = unknowns(rod)[1:4:(4*n)]
+for i in eachindex(sol.u)
+    solution_matrix = reshape(vcat(sol.u[i], (ones(rows) * 293.15)), rows, cols)
+    temp_obs = Observable(solution_matrix)
+    heatmap = GLMakie.heatmap(1:4, 1:4, temp_obs, colorrange=(T_min, T_max))
+    display(heatmap)
+    sleep(1)
+end
+
+
+unknowns(rod)
+vars = unknowns(rod)[1:4:(4*n_nodes)]
 plot(sol,
      vars=vars,
      title="Temperature Distribution in Heat Rod",
