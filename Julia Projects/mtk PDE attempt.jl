@@ -62,27 +62,30 @@ end
 end
 
 # Now, build the 1D PDE system (the rod) by connecting them!
-n = 2
+n = 3
 
 # Instantiate all the components
-@named left_boundary = SomeHeatSource()
-@named node1 = HeatCapacitor(C = 1/n)
-@named conductor = ThermalConductor(G = n)
-@named node2 = HeatCapacitor(C = 1/n)
-@named right_boundary = SomeFixedTemperature(T_fixed = 293.15) # 20 °C
+@named left_boundary = SomeHeatSource(Q_flow_fixed = 5.0)
+@named right_boundary = SomeFixedTemperature(T_fixed = 293.15)
+nodes = [HeatCapacitor(name=Symbol("node", i), C=1/n) for i in 1:n]
+conductors = [ThermalConductor(name=Symbol("cond", i), G=n) for i in 1:(n-1)]
 
-# Define the connection equations
-connections = [
-    connect(left_boundary.port, node1.port)
-    connect(node1.port, conductor.port_a)
-    connect(conductor.port_b, node2.port)
-    connect(node2.port, right_boundary.port)
-]
+# 2. Create connections programmatically
+connections = Equation[]
+# Connect internal nodes and conductors
+for i in 1:(n-1)
+    push!(connections, connect(nodes[i].port, conductors[i].port_a))
+    push!(connections, connect(conductors[i].port_b, nodes[i+1].port))
+end
+# Connect boundaries
+push!(connections, connect(left_boundary.port, nodes[1].port))
+push!(connections, connect(right_boundary.port, nodes[n].port))
 
-# Create the ODESystem
-@named rod = ODESystem(connections, t,
-                      systems=[left_boundary, node1, conductor, node2, right_boundary])
+# 3. Create the ODESystem
+all_systems = vcat(nodes, conductors, left_boundary, right_boundary)
+@named rod = ODESystem(connections, t, systems=all_systems)
 
+#We should probably get the function
 """
 @mtkmodel HeatRod begin
     @components begin
@@ -98,11 +101,11 @@ connections = [
     
     @equations begin
         # This loop IS the discretization of the PDE
-        #for i in 1:(10-1)
-            connect(nodes[1].port, conductors[1].port_a)
-            connect(conductors[].port_b, nodes[1+1].port)
-        #end
-
+        for i in 1:(n-1)
+            connect(nodes[i].port, conductors[i].port_a)
+            connect(conductors[i].port_b, nodes[i+1].port)
+        end
+        
         # Connect the ends of the rod to the boundary conditions
         connect(left_boundary.port, nodes[1].port)
         connect(right_boundary.port, nodes[n].port)
@@ -133,7 +136,7 @@ sol = solve(prob)
 
 # Plot the solution
 plot(sol,
-     vars=[node1.T, node2.T],
+     vars=[node.T for node in nodes],
      title="Temperature Distribution in Heat Rod",
      xlabel="Time (s)",
      ylabel="Temperature (K)",
