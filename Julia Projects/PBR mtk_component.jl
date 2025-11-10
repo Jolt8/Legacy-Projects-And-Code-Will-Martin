@@ -5,86 +5,65 @@ using DifferentialEquations
 
 
 import ModelingToolkit: t_nounits as t, D_nounits as D
-"""
-using Clapeyron
-model = PR(["water"])
-test = @register_symbolic Clapeyron.volume(p, T, z, phase)
-"""
-
-
-#Maybe an effective method of generating the K_eq expression would be as follows 
-function K_eq(forward_k, reverse_k, reactants_partial_pressures_vec, reactants_stoichs_vec, products_molar_flows_vec, products_stoichs_vec,)
-    #reactants_stoichs_vec would be formatted [1]
-    #reactants_partial_pressures_vec would be formatted [5900]
-    #products_partial_pressures_vec would be formatted [11009, 32098]
-    #products_stoichs_vec would be formatted [1, 2]
-    #The only reason we're doing this is because dicts cannot be handled within mtkconnectors
-    forward_term = 1
-    for i in eachindex(reactants_stoichs_vec)
-        forward_term *= (reactants_partial_pressures_vec[i]^reactants_stoichs_vec[i])
-    end
-    reverse_term = 1
-    for i in eachindex(reactants_stoichs_vec)
-        reverse_term *= (products_partial_pressures_vec[i]^products_stoichs_vec[i])
-    end
-    overall_rate = forward_k * forward_term - reverse_k * reverse_term
-    return overall_rate
-end
-@register_symbolic K_eq()
-
-
-species_val = ["CH3OH", "H2O", "CO", "H2", "CO2"]
-n_species_val = length(species_val)
-
-heat_rxn_vec_val = [-101, 54]
-
-
 #Start of Component Definitions
 @connector ReactorPort begin
+    @structural_parameters begin
+        n_species
+        n_reactants
+        n_products
+    end
+
     @parameters begin
-        species[1:n_species_val] = [], [description = "species present in mixture"]
-        F_guess[1:n_species_val] = [], [description = "molar flows in mol/s for each respective species"]
+        F_guess[1:n_species]
         T_guess = 273.13, [description = "temperature in K"]
         p_guess = 101325, [description = "pressure in Pa"]
     end
 
     @variables begin
-        F(t)[1:n_species_val], [connect = Flow, guess = F_guess]
+        F(t)[1:n_species]#, [connect = Flow, guess = F_guess]
         T(t), [guess = T_guess]
         p(t), [guess = p_guess]
     end
 end
 
 @mtkmodel ReactionKinetics begin
+    @structural_parameters begin
+        n_species
+        n_reactants
+        n_products
+        #reactant_indices[1:n_reactants]
+        #product_indices[1:n_products]
+    end
+
     @parameters begin
-        Ea_f
-        Ea_r
-        kf_A
-        kf_Ea
-        kr_A
-        kr_Ea
-        reactants_stoichs_vec, [description=""]
-        products_stoichs_vec, [description=""]
+        reactants_stoichs[1:n_reactants]
+        products_stoichs[1:n_products]
+        kf_A, [description="Forward Arrhenius pre-exponential factor"]
+        kf_Ea, [description="Forward reaction activation energy"]
+        kr_A, [description="Reverse Arrhenius pre-exponential factor"]
+        kr_Ea, [description="Reverse reaction activation energy"]
         R_gas = 8.314
     end
     
     @variables begin
-        F(t)
+        F(t)[1:n_species]
         T(t)
         p(t)
         rate(t)
-        reactants_partial_pressures(t)[1:length(reactants_stoichs_vec)]
-        products_partial_pressures(t)[1:length(products_stoichs_vec)]
-        forward_terms(t)[1:length(reactants_stoichs_vec)]
-        reverse_terms(t)[1:length(products_stoichs_vec)]
     end
     
     @equations  begin
+        F_total = sum(F)
+        
+        partial_pressures = p .* F ./ F_total
+        
         kf = kf_A * exp(-kf_Ea / (R_gas * T))
         kr = kr_A * exp(-kr_Ea / (R_gas * T))
-        forward_terms[1:length(reactants_stoichs_vec)] *= [reactants_partial_pressures[i]^reactants_stoichs_vec[i] for i in eachindex(reactants_stoichs_vec)]
-        reverse_terms[1:length(products_stoichs_vec)] *= [products_partial_pressures[i]^products_stoichs_vec[i] for i in eachindex(product_stoichs_vec)]
-        rate ~ kf .* forward_term - kr .* reverse_term
+
+        forward_term = prod(partial_pressures[1]^reactants_stoichs[i] for i in 1:n_reactants)
+        reverse_term = prod(partial_pressures[1]^products_stoichs[i] for i in 1:n_products)
+
+        rate ~ kf * forward_term - kr * reverse_term
     end
 end
 
@@ -102,61 +81,73 @@ end
     end
 
     @equations begin
-        term_1 = (150 * μ * G*(1 - ϵ)^2) / (ρ * Dp^2 * ϵ^3)
-        term_2 = (1.75 * G^2 * (1 - ϵ)) / (ρ * Dp * ϵ^3)
-        D(p) = -1 * (term_1 + term_2)
+        -D(p) ~ (150 * μ * G*(1 - ϵ)^2) / (Dp^2 * ϵ^3) + (1.75 * G^2 * (1 - ϵ)) / (Dp * ϵ^3)
     end
 end
 
 #Note sure if a reactor segment requires a 1D Element to connect them 
 #Perhaps this would be a good use case for trying out the finite volume method in mtkcomponents
-@mtkmodel ReactorConnector begin
-    @components begin
-        inlet = ReactorPort()
-        oulet = ReactorPort()
-    end
-end
-
 @mtkmodel ReactorSegment begin
     @components begin
-        port = ReactorPort()
-        PressureDrop = ErgunPressureDrop()
+        inlet = ReactorPort(n_species=n_species, n_reactants=n_reactants, n_products=n_products)
+        outlet = ReactorPort(n_species=n_species, n_reactants=n_reactants, n_products=n_products)
+        kinetics = ReactionKinetics(n_species=n_species, n_reactants=n_reactants, n_products=n_products)
+        pressure_drop = ErgunPressureDrop()
+    end
+
+    @structural_parameters begin
+        n_species
+        n_reactants
+        n_products
     end
 
     @parameters begin
         catalyst_weight = 1.0, [description = "weight of catalyst in kg present in reactor segment"] 
-        #I don't know if there's a method to convert catalyst weight in each segment to reactor length like ρ_bulk * cross_sect_area
         heat_of_reaction = -92.3
-        heat_capacity_vec[1:n_species_val], [description = "[J/(g*K)]"]
-        reactants_stoichs_vec[1:2]
-        products_stoichs_vec[1:3]
+        heat_capacity_vec[1:n_species]
+        stoich_coeffs[1:n_species]
     end
 
     @variables begin
-        F(t)
+        F(t)[1:n_species], [description = "test"]
         T(t) = 293.13
         p(t) = 101325
-        der_T(t) = 0.0
-        der_F(t)[1:n_species_val]
     end
 
     @equations begin
-        T ~ port.T
-        p ~ port.p
-        D(F)[1:length(reactants_stoichs_vec)] ~ [-1 * rate * F(t)[i] for i in 1:length(reactants_stoichs_vec)] #Don't know how do a negative rate for reactants
-        D(F)[length(reactants_stoichs_vec):length(products_stoichs_vec)] ~ [rate * F(t)[i] for i in length(reactants_stoichs_vec):length(products_stoichs_vec)]
-        D(T) ~ (rate * -heat_of_reaction) / prod([F(t)[i] * heat_capacity_vec[i] for i in eachindex(F(t))])
-        D(P) ~ PressureDrop.D(P)
+        kinetics.F ~ F
+        kinetics.T ~ T
+        kinetics.p ~ p
+        pressure_drop.p ~ p
+
+        D.(F) ~ kinetics.rate .* stoich_coeffs
+
+        D(T) ~ (kinetics.rate * -heat_of_reaction) / sum(F .* heat_capacity_vec)
+
+        inlet.F ~ F
+        inlet.T ~ T
+        inlet.p ~ p
+        
+        outlet.F ~ F
+        outlet.T ~ T
+        outlet.p ~ p
     end
 end
 
+
 @mtkmodel SpeciesSource begin
     @components begin
-        port = ReactorPort()
+        port = ReactorPort(n_species=n_species, n_reactants=n_reactants, n_products=n_products)
+    end
+
+    @structural_parameters begin
+        n_species
+        n_reactants
+        n_products
     end
 
     @parameters begin
-        F_fixed[1:n_species] = [], [description = "molar flows in mol/s for each respective species"]
+        F_fixed[1:n_species], [description = "molar flows in mol/s for each respective species"]
         T_fixed = 273.13, [description = "temperature in K"]
         p_fixed = 101325, [description = "pressure in Pa"]
     end
@@ -168,17 +159,65 @@ end
     end
 end
 
+stoich_coeffs_val = [-1, 0, 1, 2, 0] # Negative for reactants, positive for products
+reactant_indices_val = [1]
+product_indices_val = [3, 4]
+reactants_stoichs_val = [1]
+products_stoichs_val = [1, 2]
+
+n_species_val = length(stoich_coeffs_val)
+n_reactants_val = 1
+n_products_val = 2
+
 rows = 4
 n_nodes = rows
 
 heat_capacity_vec_val = [20, 20, 20, 20, 20]
-reactants_stoichs_vec_val = [1]
-products_stoichs_vec_val = [1, 2]
+reactants_stoichs_val = [1]
+products_stoichs_val = [1, 2]
 
-nodes = [ReactorSegment(name=Symbol("Reactor_Segment_", i), catalyst_weight=1, heat_of_reaction=-92.0, heat_capacity_vec=heat_capacity_vec_val, reactants_stoichs_vec=reactants_stoichs_vec_val, products_stoichs_vec=products_stoichs_vec_val) for i in 1:rows]
+@named left_bcs = SpeciesSource(n_species=n_species_val, n_reactants=n_reactants_val, n_products=n_products_val, F_fixed=[1.0, 1.0, 0.01, 0.01, 0.01], T_fixed=500.0, p_fixed=5e5)
 
-# Add boundary condition components
-left_bcs = SpeciesSource(F_fixed=[1.0, 1.3, 0.001, 0.001, 0.001], T_fixed=293.15, p_fixed=101325, name=Symbol("Species_Source"))
+ReactorSegment(name=Symbol("seg"),
+                n_species = n_species_val,
+                n_reactants = length(reactants_stoichs_val),
+                n_products = length(products_stoichs_val),
+                catalyst_weight = 5,
+                heat_of_reaction = 90.7e3, # J/mol
+                heat_capacity_vec = [81.6, 33.6, 29.1, 28.8, 37.1], # J/(mol*K)
+                stoich_coeffs = stoich_coeffs_val,
+                kinetics = ReactionKinetics(name=Symbol("kinetics"), 
+                                        n_species = n_species_val,
+                                        n_reactants = length(reactants_stoichs_val),
+                                        n_products = length(products_stoichs_val),
+                                        #reactant_indices=reactant_indices_val,
+                                        #product_indices=product_indices_val,
+                                        reactants_stoichs=reactants_stoichs_val,
+                                        products_stoichs=products_stoichs_val,
+                                        kf_A=1.0e5, kf_Ea=8.0e4, kr_A=1.0e12, kr_Ea=1.5e5)
+)
+
+segments = [ReactorSegment(name=Symbol("seg", i),
+                   n_species=n_species_val,
+                   n_reactants=length(reactant_indices_val),
+                   n_products=length(product_indices_val),
+                   catalyst_weight = catalyst_per_segment,
+                   heat_of_reaction = 90.7e3, # J/mol
+                   heat_capacity_vec = [81.6, 33.6, 29.1, 28.8, 37.1], # J/(mol*K)
+                   stoich_coeffs = stoich_coeffs_val,
+                   kinetics = ReactionKinetics(name=Symbol("kinetics", i), reactants_stoichs=reactants_stoichs_val,
+                                              products_stoichs=products_stoichs_val,
+                                              reactant_indices=reactant_indices_val,
+                                              product_indices=product_indices_val,
+                                              kf_A=1.0e5, kf_Ea=8.0e4, kr_A=1.0e12, kr_Ea=1.5e5)
+                   ) for i in 1:rows]
+
+#nodes = [ReactorSegment(name=Symbol("Reactor_Segment_", i), catalyst_weight=1, heat_of_reaction=-92.0, heat_capacity_vec=heat_capacity_vec_val, reactants_stoichs=reactants_stoichs_val, products_stoichs_vec=products_stoichs_vec_val) for i in 1:rows]
+
+
+#!!!!IMPORTANT!!!! NOTE: For some reason, whenever you do F(t)[1:n] YOU CANNOT DO A DESCRIPTION !!!!IMPORTANT!!!!
+
+
 right_bcs = SpeciesSource(F_fixed=[1.0, 1.3, 0.001, 0.001, 0.001], T_fixed=293.15, p_fixed=101325, name=Symbol("Species_Source"))
 
 connections = Equation[]
