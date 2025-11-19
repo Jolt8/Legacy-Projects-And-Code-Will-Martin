@@ -1,7 +1,7 @@
 using ModelingToolkit
 using DifferentialEquations
-using Plots
-using GLMakie
+#using Plots
+#using GLMakie
 
 import ModelingToolkit: t_nounits as t, D_nounits as D
 
