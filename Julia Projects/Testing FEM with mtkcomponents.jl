@@ -176,6 +176,8 @@ all_systems
     sol = solve(prob)
 end
 
+#if you want to time a file: @time include("C://Users//wille//Desktop//Legacy-Projects-And-Code-Will-Martin//Julia Projects//Testing FEM with mtkcomponents.jl")
+
 #these times are all after the program has compiled 
 #the first time is when its run with a new grid shape/size the second time is after rerunning with the same grid shape/size
 #this is tested on a i7-7700HQ
