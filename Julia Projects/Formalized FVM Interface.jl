@@ -7,7 +7,7 @@ struct CellGeometry
     centroid_coords::Vector{Float64}
 end
 
-function FVM_grid_dimensions(grid, poly_interp, cell_quadrature_rule, facet_quadrature_rule)
+function FVM_cell_geometries(grid, poly_interp, cell_quadrature_rule, facet_quadrature_rule)
     cell_qr = cell_quadrature_rule
     cell_values = CellValues(cell_qr, poly_interp)
     facet_qr = facet_quadrature_rule
