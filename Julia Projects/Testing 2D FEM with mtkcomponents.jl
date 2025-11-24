@@ -197,7 +197,7 @@ end
 #5x5 takes 1.21 seconds at second
 
 #10x10 takes 25.2 seconds at first
-#1x1 takes 2.83 seconds at second
+#10x10 takes 2.83 seconds at second
 
 #15x15 takes 53.8 seconds at first
 #15x15 takes 9.05 seconds at second

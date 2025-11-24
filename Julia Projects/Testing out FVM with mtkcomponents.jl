@@ -101,7 +101,15 @@ end
 left = Ferrite.Vec{3}((0.0, 0.0, 0.0))
 right = Ferrite.Vec{3}((1.0, 1.0, 1.0))
 
-grid_dimensions = (3, 3, 3)
+
+grid_dimensions = (2, 2, 2)
+
+#grid_dimensions = (3, 3, 3)
+
+#grid_dimensions = (4, 4, 4)
+
+#grid_dimensions = (5, 5, 5)
+
 
 grid = generate_grid(Hexahedron, grid_dimensions, left, right)
 
@@ -260,14 +268,66 @@ all_systems = vcat(
     #vec(right_bcs)
 )
 
-@timed begin
+#@timed begin
 @named rod = ODESystem(connections, t, systems=all_systems)
 
-sys = structural_simplify(rod)  
+println("structural_simplify time")
+@time sys = structural_simplify(rod) #oh wow, structural simplify only takes 7.6 seconds on a 5x5x5 grid
+#not what's better, structural simplify vs mtkcompile vs mtkbuild
 
 tspan = (0.0, 10.0)
 
-prob = ODEProblem(sys, [], tspan)
+println("prob = ODEProblem() time")
+@time prob = ODEProblem(sys, [], tspan) #it seems like this take a majority of the time, a 5x5x5 grid takes 129.5 seconds
 
-sol = solve(prob)
-end
+#=
+Apparently if we need to use the 2nd run time speed again we can do this
+    #using Serialization
+    #serialize("my_compiled_problem.jls", prob)
+
+Then in another julia session we can do
+    #prob_loaded = deserialize("my_compiled_problem.jls")
+    #sol = solve(prob_loaded)
+=#
+
+println("sol time")
+@time sol = solve(prob, Tsit5()) #this only takes 10.5 seconds for a 5x5x5 grid
+#end
+
+#3x3x3 first run with @mtkcompile: time = 24.6497834, bytes = 2122804680, gctime = 0.7310769, gcstats = Base.GC_Diff(2122804680, 47856, 0, 40144801, 239, 53930, 731076900, 9, 0), lock_conflicts = 0, compile_time = 22.8066422, recompile_time = 2.6308544)
+#3x3x3 second run with @mtkcompile: time = 1.7795824, bytes = 354339151, gctime = 0.1219632, gcstats = Base.GC_Diff(354339151, 13193, 0, 7595171, 48, 29811, 121963200, 2, 0), lock_conflicts = 0, compile_time = 0.0003177, recompile_time = 8.78e-5)
+
+#5x5x5 first run with @mtkcompile: time = 148.9056473, bytes = 6397700043, gctime = 3.1595138, gcstats = Base.GC_Diff(6397700043, 148405, 0, 95280353, 234, 140616, 3159513800, 86, 1), lock_conflicts = 0, compile_time = 124.3522357, recompile_time = 0.1753425)
+#5x5x5 second run with @mtkcompile: time = 19.6836342, bytes = 4173726251, gctime = 0.7051157, gcstats = Base.GC_Diff(4173726251, 120541, 0, 48697760, 69, 142215, 705115700, 10, 0), lock_conflicts = 0, compile_time = 0.0004347, recompile_time = 0.0004347)
+
+#3x3x3 first run with structural_simplify: time = 17.7417201, bytes = 1749498877, gctime = 0.5585368, gcstats = Base.GC_Diff(1749498877, 40755, 0, 33566670, 197, 42405, 558536800, 8, 0), lock_conflicts = 0, compile_time = 15.5328464, recompile_time = 0.0240274)
+#3x3x3 second run with structural_simplify: time = 2.183446, bytes = 354580897, gctime = 0.108073, gcstats = Base.GC_Diff(354580897, 13191, 0, 7612215, 48, 15720, 108073000, 2, 0), lock_conflicts = 0, compile_time = 0.0001742, recompile_time = 0.0001742)
+
+#5x5x5 first run with structural_simplify: time = 133.4732483, bytes = 6389232449, gctime = 2.1426962, gcstats = Base.GC_Diff(6389232449, 148343, 0, 95118570, 233, 148297, 2142696200, 93, 1), lock_conflicts = 0, compile_time = 110.5543221, recompile_time = 0.0008988)
+#5x5x5 second run with structural_simplify: time = 20.9268831, bytes = 4174243188, gctime = 1.0864351, gcstats = Base.GC_Diff(4174243188, 120540, 0, 48758377, 69, 132999, 1086435100, 80, 0), lock_conflicts = 0, compile_time = 0.0005768, recompile_time = 0.0005768)
+
+#10x10x1 first run with structural_simplify: time = 66.4354146, bytes = 3994300289, gctime = 1.68664, gcstats = Base.GC_Diff(3994300289, 94479, 0, 65909926, 227, 95745, 1686640000, 46, 1), lock_conflicts = 0, compile_time = 54.0502099, recompile_time = 0.0008226)
+#the above took 25 seconds in the 2D FEM with mtkcomponents file (10x10 grid) on first run
+#the above took  44.3 seconds in the 3D FEM with mtkcomponents file (10x10x1 grid) on first run. complete output: 44.315889 seconds (58.30 M allocations: 3.390 GiB, 4.98% gc time, 78.12% compilation time: <1% of which was recompilation)
+#10x10x1 second run with structural_simplify: time = 14.7961221, bytes = 2180224051, gctime = 0.8638261, gcstats = Base.GC_Diff(2180224051, 66885, 0, 29139042, 64, 75347, 863826100, 29, 0), lock_conflicts = 0, compile_time = 0.0006752, recompile_time = 0.0006752)
+
+
+#4x4x4 detailed
+#=
+structural_simplify time
+    1.881339 seconds (6.00 M allocations: 405.779 MiB, 9.94% gc time, 0.02% compilation time: 100% of which was recompilation)
+prob time
+    41.985048 seconds (28.07 M allocations: 1.588 GiB, 1.74% gc time, 80.81% compilation time)
+sol time
+    8.857977 seconds (20.60 M allocations: 1.065 GiB, 4.18% gc time, 99.98% compilation time)
+=#
+
+#4x4x4 detailed second run
+#=
+structural_simplify time
+    3.136403 seconds (5.96 M allocations: 404.536 MiB, 43.32% gc time, 0.01% compilation time: 100% of which was recompilation)
+prob = ODEProblem() time
+    6.153364 seconds (15.53 M allocations: 1.091 GiB, 5.71% gc time)
+sol time
+    0.001153 seconds (16.58 k allocations: 566.454 KiB)
+=#

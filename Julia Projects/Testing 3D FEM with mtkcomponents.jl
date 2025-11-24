@@ -96,16 +96,16 @@ end
 left = Ferrite.Vec{3}((0.0, 0.0, 0.0))
 right = Ferrite.Vec{3}((1.0, 1.0, 1.0))
 
-grid_dimensions = (3, 3, 3)
+grid_dimensions = (10, 10, 1)
 
 grid = generate_grid(Hexahedron, grid_dimensions, left, right)
 
 length_to_node_ratio = right[1] / collect(grid_dimensions)[1]
 
-addcellset!(grid, "left", x -> x[1] <= left[1] + length_to_node_ratio)
-#getcellset(grid, "left")
-addcellset!(grid, "right", (x) -> x[1] >= (right[1] - 0.0000001) - (length_to_node_ratio)) #1 doesn't work
-#getcellset(grid, "right")
+addnodeset!(grid, "left", x -> x[1] <= left[1] + length_to_node_ratio)
+getnodeset(grid, "left")
+addnodeset!(grid, "right", (x) -> x[1] >= (right[1] - 0.0000001) - (length_to_node_ratio)) #1 doesn't work
+getnodeset(grid, "right")
 
 top = ExclusiveTopology(grid)
 

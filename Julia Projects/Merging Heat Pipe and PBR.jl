@@ -206,7 +206,7 @@ bcs = [
 
     #below is for heat pipe BCS
     T_j(t_start, x) ~ 573.0,
-    T_j(t, x_max) ~ T(t, z_max), #this actually works!
+    #T_j(t, x_min) ~ T(t, z_max), #this actually works!
     #currently T_j(t, x_min) ~ T(t, 0.5) doesn't work - this needs to be resolved
         # The only way I could see of solving this is to hack it in such a way that the reactor is split in two the boundary conditions are connected again and then we pull from that interface
 ]
@@ -264,9 +264,10 @@ file = open("C://Users//wille//Desktop//Legacy-Projects-And-Code-Will-Martin//Ju
 debug_callback = DiscreteCallback((u, t, integrator) -> true, print_debug_info)
 #debug_callback = DiscreteCallback((u, t, integrator) -> (time() - last_log_time >= 1.0), print_debug_info)
 
-sol = solve(prob, Rosenbrock23(), callback = debug_callback)
+@time sol = solve(prob, Rosenbrock23(), callback = debug_callback)
 
 
+#=
 t_grid = sol.t
 z_grid = sol[z]
 x_grid = sol[x]
@@ -408,3 +409,4 @@ sol[F_CO(t, z)][max_time_idx, z_s:z_e]
 plot!(z_slice, sol[F_CO2(t, z)][max_time_idx, z_s:z_e], label="CO2")
 sol[F_CO2(t, z)][max_time_idx, z_s:z_e]
 """
+=#

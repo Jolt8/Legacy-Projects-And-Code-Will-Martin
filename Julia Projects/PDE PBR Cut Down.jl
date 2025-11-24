@@ -148,13 +148,12 @@ params = [R, cross_sect_area, ρ_bulk, Dp, epsilon, mu_gas, MW_CH3OH,
 pdesystem.domain
 pdesystem.bcs
 
-discretization = MOLFiniteDifference([z => 15], t) # Discretize z into 20 points
+discretization = MOLFiniteDifference([z => 10], t) 
 @time prob = discretize(pdesystem, discretization)
 
-sol = solve(prob, Rosenbrock23())
+@time sol = solve(prob, Rosenbrock23())
 
-# --- Plotting Results ---
-# We need to extract the solution for each variable at different points in z
+#Plot results
 z_grid = sol[z]
 t_grid = sol[t]
 F_CH3OH_sol = sol[F_CH3OH(t, z)]
