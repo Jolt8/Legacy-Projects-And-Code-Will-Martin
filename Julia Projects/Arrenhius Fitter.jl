@@ -1,4 +1,6 @@
 using GLM, DataFrames
+using Unitful
+using Plots
 struct ChemicalReaction
     name::String
     reactants::Dict{String, Int}
@@ -19,31 +21,15 @@ reaction = ChemicalReaction(
     nothing, nothing
 )
 
-reaction_temperature = 45.13u"°C" |> u"K"
-
-species_starting_concentration = 1.0u"mol/L"
-
-time_concentration_pairs = [[0.0u"s", 1.0u"mol/L"], [1.0u"s", 0.5u"mol/L"]]
-
-species_i_for_pairs = 1
-
-reaction_order = 0
-
-for (reactant, nu) in reaction.reactants
-    reaction_order += nu
-end
-
-reaction_order #this is kinda bad because reactions with more than 1 step can be a different order than it appears based on its stoichiometry
-
 rate_constants = []
-
+#=
 reaction_order = 0
 trials = Dict(
     200.0u"°C" => [[0.0u"s", 2.0u"mol/L"], [60.0u"s", 1.884u"mol/L"]],
     300.0u"°C" => [[0.0u"s", 2.0u"mol/L"], [60.0u"s", 1.679u"mol/L"]],
     350.0u"°C" => [[0.0u"s", 2.0u"mol/L"], [60.0u"s", 1.379u"mol/L"]]
 )
-
+=#
 #=
 reaction_order = 1
 trials = Dict(
@@ -60,14 +46,14 @@ trials = Dict(
     350.0u"°C" => [[0.0u"s", 2.0u"mol/L"], [60.0u"s", 0.383u"mol/L"]]
 )
 =#
-#=
+
 reaction_order = 2
 trials = Dict(
-    250.0u"°C" => [[0.0u"s", 2.0u"mol/L"], [60.0u"s", 1.0u"mol/L"]],
-    300.0u"°C" => [[0.0u"s", 2.0u"mol/L"], [60.0u"s", 0.739u"mol/L"]],
-    350.0u"°C" => [[0.0u"s", 2.0u"mol/L"], [60.0u"s", 0.383u"mol/L"]]
+    (45.0u"°C" |> u"K") => [[0.0u"minute", 0.95u"mol/L"], [100.0u"minute", 0.47u"mol/L"], [200.0u"minute", 0.25u"mol/L"]],
+    (65.0u"°C" |> u"K") => [[0.0u"minute", 0.85u"mol/L"], [100.0u"minute", 0.29u"mol/L"], [200.0u"minute", 0.20u"mol/L"]],
+    (75.0u"°C" |> u"K") => [[0.0u"minute", 0.80u"mol/L"], [100.0u"minute", 0.15u"mol/L"], [200.0u"minute", 0.15u"mol/L"]]
 )
-=#
+
 #=
 reaction_order = 3
 trials = Dict(
@@ -95,16 +81,11 @@ T_k_pairs
 
 one_over_temperatures = Float64[]
 ln_rate_constants = Float64[]
-"""
+
 for (temperature, rate_constant) in T_k_pairs
     push!(one_over_temperatures, 1.0/ustrip(uconvert(u"K", temperature)))
     push!(ln_rate_constants, log(ustrip(rate_constant)))
 end
-"""
-
-one_over_temperatures
-ln_rate_constants
-
 
 
 plt = plot(one_over_temperatures, ln_rate_constants,
@@ -131,4 +112,17 @@ pre_exponential_factor = exp(y_intercept)
 
 slope = coefficients[2] #this is our Ea/R_GAS
 Ea = slope / 8.314
+
+
+function arrenhius_equation_rate_constant(A, Ea, T)
+    R_GAS = 8.314
+    return (A * exp(-Ea / (R_GAS * T)))
+end
+
+T = ustrip((45.13u"°C" |> u"K"))
+
+pre_exponential_factor
+Ea
+
+arrenhius_equation_rate_constant(pre_exponential_factor, Ea, T)
 
