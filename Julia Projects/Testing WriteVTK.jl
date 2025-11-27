@@ -10,7 +10,7 @@ right = Ferrite.Vec{3}((1.0, 1.0, 1.0))
 grid_dimensions = (2, 2, 2)
 
 grid = generate_grid(Hexahedron, grid_dimensions, left, right)
-
+VTKPolyhedron()
 points = Float32[]
 cells = VTKPolyhedron[]
 for cell in CellIterator(grid)
@@ -23,6 +23,7 @@ for cell in CellIterator(grid)
     
     nodes_of_cell_faces = Ferrite.faces(grid.cells[cell_idx])
 
+    println(nodes_of_cell)
     println(nodes_of_cell_faces)
 
     push!(cells, VTKPolyhedron(nodes_of_cell, nodes_of_cell_faces))
