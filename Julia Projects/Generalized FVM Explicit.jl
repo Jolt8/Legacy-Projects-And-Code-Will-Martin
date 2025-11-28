@@ -79,6 +79,20 @@ end
 struct FreeBC <: BC
 end
 
+abstract type FacetBC end
+
+struct FacetNeuBC <: FacetBC
+    flux::Float64
+end
+
+struct FacetRobBC <: FacetBC
+    fixed::Float64
+    flux::Float64
+end
+
+struct FacetFreeBC <: FacetBC
+end
+
 #These parameters would require units in their base form (no kg) on struct definition but kg can be entered in later
 abstract type CellProperties end
 struct Material <: CellProperties
@@ -97,10 +111,11 @@ struct ProblemParameters
     capacities::Vector{Float64} #capacitance/flux resistance can't come up with a good general name
     connections::Vector{Connection}
     cell_type_map::Vector{BC} 
+    facet_type_map::Matrix{FacetBC}
 end
 
 # 2. CREATE A SETUP FUNCTION
-function setup_manual_problem_all_func(grid, cell_geometries, cell_sets) #another possible version
+function setup_manual_problem_all_func(grid, cell_geometries, cell_sets, facet_sets) #another possible version
     n_cells = getncells(grid)
     top = ExclusiveTopology(grid)
 
@@ -114,6 +129,19 @@ function setup_manual_problem_all_func(grid, cell_geometries, cell_sets) #anothe
             material_id_map[cell_idx] = set_index
         end
     end
+
+    facet_id_map = zeros(Int, n_cells, 6)
+    
+    for (set_index, facet_set) in enumerate(facet_sets)
+        set_indices = collect(getfacetset(grid, facet_set.set_name))
+        for facet_index in set_indices #facet_index is formatted FacetIndex(101, 5) where 101 is the cellid and 5 is the faceid
+            cell_id = collect(facet_index.idx)[1]
+            face_id = collect(facet_index.idx)[2]
+            facet_id_map[cell_id, face_id] = set_index
+        end
+    end
+
+    facet_type_map = Array{FacetBC}(undef, n_cells, 6)
 
     cell_type_map = Vector{BC}(undef, n_cells)
 
@@ -134,6 +162,13 @@ function setup_manual_problem_all_func(grid, cell_geometries, cell_sets) #anothe
         cell_type_map[i] = active_set.type
 
         for j in 1:nfacets(grid.cells[i])
+            facet_id = facet_id_map[i, j]
+            if facet_id != 0
+                facet_type_map[i, j] = facet_sets[facet_id].type
+            else
+                facet_type_map[i, j] = FacetFreeBC()
+            end
+
             neighbor_info = top.face_face_neighbor[i, j]
             if !isempty(neighbor_info)
                 neighbor_idx = collect(neighbor_info[1].idx)[1] #the collect()[1] is required here because neighbor_info[1].idx returns a tuple 
@@ -154,7 +189,7 @@ function setup_manual_problem_all_func(grid, cell_geometries, cell_sets) #anothe
             end
         end
     end
-    return ProblemParameters(capacities, connections, cell_type_map)
+    return ProblemParameters(capacities, connections, cell_type_map, facet_type_map)
 end
 
 #the one thing I don't like about this workflow is that I can't print inside FVM_iter_f! because of the !
@@ -187,13 +222,23 @@ function FVM_iter_f!(du, u, p::ProblemParameters, t)
         end
     end
 
-    for idx in 1:length(u)
-        if typeof(p.cell_type_map[idx]) == NeuBC
-            du[idx] += p.cell_type_map[idx].flux / p.capacities[idx]
-        elseif typeof(p.cell_type_map[idx]) == RobBC
+    for i in 1:length(u)
+        if typeof(p.cell_type_map[i]) == NeuBC
+            du[i] += p.cell_type_map[i].flux / p.capacities[i]
+        elseif typeof(p.cell_type_map[i]) == RobBC
             #something here
         end
     end
+    
+    for cell in CellIterator(grid)
+        i = cellid(cell)
+        for j in 1:nfacets(cell)
+            if typeof(p.facet_type_map[i, j]) == FacetNeuBC
+                du[i] += p.facet_type_map[i, j].flux / p.capacities[i]
+            end
+        end
+    end
+    
 
     #Step D: Convert net heat flow (Q_net, which is currently in `du`)to rate of temperature change (dT/dt) using the formula:
     #C * dT/dt = Q_net  =>  dT/dt = Q_net / C
@@ -224,16 +269,31 @@ struct CellSet{T, C, P}
     type::BC #would be dir, neu, rob
 end
 
+struct FacetSet 
+    set_name::String
+    type::FacetBC #would be dir, neu, rob
+end
+
 #Cell Definitions
-copper = Material(401.0u"W/(m*K)", 8.96u"g/cm^3", 0.385u"J/(g*K)") 
-steel = Material(45.0u"W/(m*K)", 7.85u"g/cm^3", 0.446u"J/(g*K)") 
+copper = Material(401.0u"W/(m*K)", 8.96u"g/cm^3", 0.385u"J/(g*K)") #FIXME
+steel = Material(45.0u"W/(m*K)", 7.85u"g/cm^3", 0.446u"J/(g*K)") #FIXME
 
 left_set = CellSet("left", heat_volume_transmissibility, heat_volume_capacity, copper, NeuBC(500.0))
 default_set = CellSet("default", heat_volume_transmissibility, heat_volume_capacity, copper, FreeBC())
 
 cell_sets = [left_set, default_set]
 
-@time p = setup_manual_problem_all_func(grid, cell_geometries, cell_sets)
+#Face BCS Definitions
+addboundaryfacetset!(grid, top, "flux_in", x -> x[1] ≈ 0.0)
+getfacetset(grid, "flux_in")
+flux_in_set = FacetSet("flux_in", FacetNeuBC(500.0))
+
+facet_sets = [flux_in_set]
+
+#Get p
+@time p = setup_manual_problem_all_func(grid, cell_geometries, cell_sets, facet_sets)
+
+p.facet_type_map
 
 #setup
 n_cells = getncells(grid)
@@ -255,11 +315,23 @@ end
 #TODO:
 Almost done! - Generate a sparsity pattern to use Implicit Solvers (KenCarp4) for finer grids.
 =#
-tspan = (0.0, 1.0)
+tspan = (0.0, 1.0) #for some reason I can only get change if tspan is absolutely massive
 
 println("prob = ODEProblem() time (manual)")
 
 @time prob = ODEProblem(FVM_iter_f!, u0, tspan, p)
+
+#Defining a sparse array
+#=
+ref_shape = getrefshape(grid.cells[1])
+ip = Lagrange{ref_shape, 1}()
+qr = QuadratureRule{ref_shape}(2)
+
+dh = DofHandler(grid)
+add!(dh, :u, ip)
+close!(dh);
+K = allocate_matrix(dh)
+=#
 
 println("sol time (manual)")
 desired_amount_of_u = 100
@@ -281,7 +353,7 @@ println("\n# of u: ", length(sol.u))#using this to roughly estimate how long wri
 #replace(basename(@__FILE__),r".jl" => "")
 
 #Making the solution avaliable to paraview
-record_sol = false
+record_sol = true
 
 if record_sol == true
     date_and_time = Dates.format(now(), "I.MM.SS p yyyy-mm-dd")
