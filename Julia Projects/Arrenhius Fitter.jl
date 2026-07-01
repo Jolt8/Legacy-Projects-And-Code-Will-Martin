@@ -72,7 +72,7 @@ for (temperature, time_and_concentrations) in trials
         T_k_pairs[temperature] = -(concentration_vals[2] - concentration_vals[1]) / (time_vals[2] - time_vals[1])
     elseif reaction_order == 1
         T_k_pairs[temperature] = -(log(ustrip(concentration_vals[2])) - log(ustrip(concentration_vals[1]))) / (time_vals[2] - time_vals[1])
-    else #reaction_order == 2
+    elseif reaction_order == 2
         T_k_pairs[temperature] = (1/(concentration_vals[2]) - 1/(concentration_vals[1])) / (time_vals[2] - time_vals[1])
     end
 end

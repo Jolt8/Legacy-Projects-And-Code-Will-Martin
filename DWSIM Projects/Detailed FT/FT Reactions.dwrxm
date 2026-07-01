@@ -1,0 +1,1524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DWSIM_Reaction_Data>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>HOH + CO --&gt; H2 + OCO </Equation>
+    <ID>10c6a166-5111-4fbe-8137-10863ba867d8</ID>
+    <Name>co2</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-41165.9999999995</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>23.8</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="-1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="Carbon dioxide" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>17H2 + 8CO --&gt; 8HOH + CH3(CH2)2CH3 + CH2CHCH2CH3 </Equation>
+    <ID>7ff58436-b2de-4c5c-8a04-9c33b9568472</ID>
+    <Name>butane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-147070.250000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>5.814</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="8" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-17" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-8" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="N-butane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="1-butene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>13H2 + 6CO --&gt; 6HOH + CH3CH2CH3 + C3H6 </Equation>
+    <ID>d63e0c27-978d-4555-851a-100a21ff541d</ID>
+    <Name>propane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-148730.666666667</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>3.179</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="6" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-13" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-6" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="Propane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="CycloPropane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>9H2 + 4CO --&gt; 4HOH + CH3CH3 + CH2CH2 </Equation>
+    <ID>d40397e2-c080-4444-b856-2e76f1edac0c</ID>
+    <Name>ethane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-139111.500000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>4.267</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="4" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-9" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-4" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="Ethane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Ethylene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>3H2 + CO --&gt; CH4 + HOH </Equation>
+    <ID>2b593e75-0aed-4254-8df8-7999c2a5aea6</ID>
+    <Name>methane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-205804.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>6.12</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Methane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Water" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-3" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>27H2 + 13CO --&gt; 13HOH + CH3(CH2)11CH3 </Equation>
+    <ID>8940f03a-f464-4795-8677-45a05ffde513</ID>
+    <Name>tridecane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-155266.307692308</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>1.095684</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="13" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-27" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-13" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="N-tridecane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>17H2 + 12CO --&gt; 12HOH + (C6H5)2 </Equation>
+    <ID>4552e501-0675-4c20-8d79-baba618f760d</ID>
+    <Name>biphenyl</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-116110.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.832218</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="12" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-17" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-12" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="Biphenyl" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>24H2 + 12CO --&gt; 12HOH + CH3(CH2)9CHCH2 </Equation>
+    <ID>1f722eaa-8953-4b4b-b196-d2e1531f5883</ID>
+    <Name>dodecene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-145067.333333334</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.013382</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="12" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-24" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-12" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="1-dodecene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>25H2 + 12CO --&gt; 12HOH + CH3(CH2)10CH3 </Equation>
+    <ID>910b9763-f54f-4b7f-a940-b31b2f23f128</ID>
+    <Name>dodecane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-155510.666666667</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.381817</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="12" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-25" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-12" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="N-dodecane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>22H2 + 11CO --&gt; 11HOH + CH3(CH2)8CHCH2 </Equation>
+    <ID>bbdfbd0c-142b-4f44-b1c2-3d0b62644563</ID>
+    <Name>undecene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-144456.727272728</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.062730</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="11" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-22" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-11" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="1-undecene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>23H2 + 11CO --&gt; 11HOH + CH3(CH2)9CH3 </Equation>
+    <ID>54e39864-2715-427a-965b-4ae79cb43570</ID>
+    <Name>undec</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-155868.545454546</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>1.216962</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="11" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-23" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-11" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="N-undecane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>17H2 + 10CO --&gt; 10HOH + (C6H2)(CH3)4 </Equation>
+    <ID>dc6c743e-aa48-4881-84dc-fb5dbb94f6f4</ID>
+    <Name>durene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-135811.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>5.762796</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="10" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-17" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-10" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="1,2,4,5-tetramethylbenzene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>20H2 + 10CO --&gt; 10HOH + CH3(CH2)7CHCH2 </Equation>
+    <ID>c383f32f-1475-4393-a959-8ff1d7bbf996</ID>
+    <Name>decene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-143494.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.2091</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="10" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-20" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-10" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="1-decene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>21H2 + 10CO --&gt; 10HOH + (CH3)2CH(CH2)6CH3 </Equation>
+    <ID>d6813eb3-acac-4f2a-a16b-dec1dac88590</ID>
+    <Name>idecane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-156936.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>1.768986</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="10" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-21" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-10" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="2-methylnonane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>21H2 + 10CO --&gt; 10HOH + CH3(CH2)8CH3 </Equation>
+    <ID>cdfbb2ff-e021-4a33-a343-300bfa503793</ID>
+    <Name>docane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-156230.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>1.221144</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="10" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-21" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-10" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="N-decane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>15H2 + 9CO --&gt; 9HOH + (C6H5)CH(CH3)2 </Equation>
+    <ID>4b77ea39-dcb1-4b6e-a621-497286dd508c</ID>
+    <Name>cumene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-130839.555555556</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.648210</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="9" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-15" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-9" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="Cumene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>18H2 + 9CO --&gt; 9HOH + CH2CH(CH2)6CH3 </Equation>
+    <ID>ae175966-1b39-4648-96cc-8fd3358baf9c</ID>
+    <Name>nonene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-142784.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>2.120274</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="9" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-18" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-9" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="1-nonene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>19H2 + 9CO --&gt; 9HOH + (CH3)2CH(CH2)5CH3 </Equation>
+    <ID>8c11071b-6cfd-4f0e-93bf-2ffe5c24abb6</ID>
+    <Name>inonane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-157372.88888889</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>3.086316</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="9" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-19" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-9" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="2-methyloctane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>19H2 + 9CO --&gt; 9HOH + CH3(CH2)7CH3 </Equation>
+    <ID>faed9cab-4a50-4842-98dd-576a6dc2c406</ID>
+    <Name>nonane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-156699.555555556</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>1.0455</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="9" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-19" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-9" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="N-nonane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>13H2 + 8CO --&gt; 8HOH + (C6H5)CH2CH3 </Equation>
+    <ID>09d7080b-9315-4046-b2c1-ea00685c574a</ID>
+    <Name>ethylbenzene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-127544.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.255102</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="8" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-13" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-8" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="Ethylbenzene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>16H2 + 8CO --&gt; 8HOH + CH2CH(CH2)5CH3 </Equation>
+    <ID>f8851302-8f7f-4839-aa2e-56246f6f6849</ID>
+    <Name>octene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-141526.500000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.526932</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="8" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-16" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-8" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="1-octene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>17H2 + 8CO --&gt; 8HOH + (CH3)3CCH2CH(CH3)2 </Equation>
+    <ID>15a7d6ff-51c0-4fce-afdb-4aa0bd65b954</ID>
+    <Name>ioct</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-159285.250000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.330378</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="8" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-17" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-8" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="2,2,4-trimethylpentane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>17H2 + 8CO --&gt; 8HOH + CH3(CH2)6CH3 </Equation>
+    <ID>1d1f029e-fdb3-4f7e-8cc1-15a673163fab</ID>
+    <Name>octane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-157377.750000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.8364</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="8" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-17" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-8" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="N-octane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>11H2 + 7CO --&gt; 7HOH + (C6H5)CH3 </Equation>
+    <ID>d905aa40-4cdb-4641-a63a-9577996681c3</ID>
+    <Name>Toluene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-124116.857142858</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.2091</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="7" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-11" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-7" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="Toluene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>14H2 + 7CO --&gt; 7HOH + CH2CH(CH2)4CH3 </Equation>
+    <ID>9df350c1-702e-49c5-b75e-7e3aa368dd3b</ID>
+    <Name>heptene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-140268.285714286</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>4.336734</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="7" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-14" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-7" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="1-heptene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>12H2 + 6CO --&gt; 6HOH + CH2CH(CH2)3CH3 </Equation>
+    <ID>3aa7fe5b-9a5b-4235-9229-7223d78acb6a</ID>
+    <Name>hexene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-138229.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>1.957176</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="6" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-12" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-6" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="1-hexene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>13H2 + 6CO --&gt; 6HOH + CH3CH2CH2CH(CH3)2 </Equation>
+    <ID>6a56cade-6fbe-4a22-8ea3-af78abefd63c</ID>
+    <Name>ihex</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-160375.666666667</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.010455</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="6" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-13" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-6" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="2-methylpentane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>13H2 + 6CO --&gt; 6HOH + CH3(CH2)4CH3 </Equation>
+    <ID>726e14e4-bb9d-4a50-b317-23ec63306ad7</ID>
+    <Name>hexane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-159107.333333334</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.460020</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="6" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-13" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-6" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="N-hexane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>10H2 + 5CO --&gt; 5HOH + CH2CH(CH2)2CH3 </Equation>
+    <ID>90584e64-dd8e-46ab-ab3a-08cd18a43911</ID>
+    <Name>pentene</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-135608.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.280194</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="5" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-10" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-5" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="1-pentene" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>11H2 + 5CO --&gt; 5HOH + CH3(CH2)3CH3 </Equation>
+    <ID>11bc7f5b-ee8c-4f36-b707-30e16e1d3659</ID>
+    <Name>pentane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-160636.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.029274</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="5" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-11" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-5" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="N-pentane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>15H2 + 7CO --&gt; 7HOH + CH3(CH2)5CH3 </Equation>
+    <ID>e9119669-cde5-4031-87bc-5a1dcb316ecf</ID>
+    <Name>heptane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-158091.142857144</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.953496</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="7" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-15" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-7" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="N-heptane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>15H2 + 7CO --&gt; 7HOH + CH3CH(CH3)(CH2)3CH3 </Equation>
+    <ID>3d4af838-945d-42b2-b6dc-e5db90cd5458</ID>
+    <Name>ihep</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-159101.142857144</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>0.138006</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="7" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-15" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-7" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="2-methylhexane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Methane</BaseReactant>
+    <Description></Description>
+    <Equation>CH4 + HOH &lt;--&gt; 3H2 + CO </Equation>
+    <ID>f90e1006-cf2e-49cb-b531-f3837acaf2f2</ID>
+    <Name>Steam Reforming</Name>
+    <ReactionBasis>PartialPress</ReactionBasis>
+    <ReactionHeat>205804</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Vapor</ReactionPhase>
+    <ReactionType>Heterogeneous_Catalytic</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit>atm</ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression></Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator>(1+6.65E-4*exp(38280/(8.314*T))*R1+8.23E-5*exp(70650/(8.314*T))*P2+6.12E-9*exp(82900/(8.314*T))*P1+1.77E+5*exp(-88680/(8.314*T))*R2/P1)^2</RateEquationDenominator>
+    <RateEquationNumerator>4.22E+15*exp(-240100/(8.314*T))/P1^2.5*((R1*R2)-(P1^3*P2)/(exp(30.42-27106/T)))</RateEquationNumerator>
+    <ReactionGibbsEnergy>141930</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit>kmol/[kg.h]</VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Methane" StoichCoeff="-1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="Water" StoichCoeff="-1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="3" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+</DWSIM_Reaction_Data>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DWSIM_Reaction_Data>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Carbon monoxide</BaseReactant>
+    <Description></Description>
+    <Equation>27H2 + 13CO --&gt; 13HOH + CH3(CH2)11CH3 </Equation>
+    <ID>8940f03a-f464-4795-8677-45a05ffde513</ID>
+    <Name>tridecane</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-155266.307692308</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Mixture</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>1.095684</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Water" StoichCoeff="13" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="-27" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="-13" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="N-tridecane" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+</DWSIM_Reaction_Data>

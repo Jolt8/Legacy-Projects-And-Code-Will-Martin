@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DWSIM_Reaction_Data>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Methane</BaseReactant>
+    <Description></Description>
+    <Equation>CH4 + HOH &lt;--&gt; 3H2 + CO </Equation>
+    <ID>f90e1006-cf2e-49cb-b531-f3837acaf2f2</ID>
+    <Name>Steam Reforming</Name>
+    <ReactionBasis>PartialPress</ReactionBasis>
+    <ReactionHeat>205804.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Vapor</ReactionPhase>
+    <ReactionType>Heterogeneous_Catalytic</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit>atm</ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression></Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator>(1+6.65E-4*exp(38280/(8.314*T))*R1+8.23E-5*exp(70650/(8.314*T))*P2+6.12E-9*exp(82900/(8.314*T))*P1+1.77E+5*exp(-88680/(8.314*T))*R2/P1)^2</RateEquationDenominator>
+    <RateEquationNumerator>4.22E+15*exp(-240100/(8.314*T))/P1^2.5*((R1*R2)-(P1^3*P2)/(exp(30.42-27106/T)))</RateEquationNumerator>
+    <ReactionGibbsEnergy>141929.999999999</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit>kmol/[kg.h]</VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Methane" StoichCoeff="-1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="Water" StoichCoeff="-1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Hydrogen" StoichCoeff="3" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon monoxide" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+</DWSIM_Reaction_Data>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DWSIM_Reaction_Data>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Methane</BaseReactant>
+    <Description></Description>
+    <Equation>CH4 + 2O2 --&gt; 2HOH + OCO </Equation>
+    <ID>6b3cae4a-afb4-438f-be17-e3c3c0edcac4</ID>
+    <Name>Full Combustion</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-802618.000000001</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Liquid</ReactionPhase>
+    <ReactionType>Conversion</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression>90</Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>0</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Methane" StoichCoeff="-1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="Oxygen" StoichCoeff="-2" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Water" StoichCoeff="2" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon dioxide" StoichCoeff="1" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+</DWSIM_Reaction_Data>

@@ -1,5 +1,3 @@
-
-#=
 function check_mesh(grid, max_acceptable_aspect_ratio)
     cell_geometries = get_cell_geometries(grid)
 
@@ -28,7 +26,7 @@ function check_mesh(grid, max_acceptable_aspect_ratio)
             Ferrite.reinit!(cv, cell)
             for j in 2:getnquadpoints(cv)
                 point_coord = getcoordinates(grid, cell_id)[j]
-                dist_between_points = norm(start_coord - point_coord))
+                dist_between_points = norm(start_coord - point_coord)
             end
             
             aspect_ratio = maximum(dist_between_points) / minimum(dist_between_points)
@@ -38,5 +36,5 @@ function check_mesh(grid, max_acceptable_aspect_ratio)
         end
     end
 end
-=#
-#check_mesh(grid, 500) #For some reason this takes forever
+
+check_mesh(grid, 500) #For some reason this takes forever

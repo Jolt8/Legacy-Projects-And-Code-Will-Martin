@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DWSIM_Reaction_Data>
+  <Reaction>
+    <Type>DWSIM.Thermodynamics.BaseClasses.Reaction</Type>
+    <BaseReactant>Methane</BaseReactant>
+    <Description></Description>
+    <Equation>3CH4 + 2O2 + 2HOH &lt;--&gt; 8H2 + 3OCO </Equation>
+    <ID>cc0e40db-0955-4ece-924e-7ed6c91309b6</ID>
+    <Name>ATR (No CO)</Name>
+    <ReactionBasis>Fugacity</ReactionBasis>
+    <ReactionHeat>-157780.666666666</ReactionHeat>
+    <ReactionHeatCO>0</ReactionHeatCO>
+    <ReactionPhase>Liquid</ReactionPhase>
+    <ReactionType>Equilibrium</ReactionType>
+    <StoichBalance>0</StoichBalance>
+    <A_Forward>0</A_Forward>
+    <A_Reverse>0</A_Reverse>
+    <Approach>0</Approach>
+    <ConcUnit></ConcUnit>
+    <ConstantKeqValue>0</ConstantKeqValue>
+    <E_Forward>0</E_Forward>
+    <E_Reverse>0</E_Reverse>
+    <Expression></Expression>
+    <KExprType>Gibbs</KExprType>
+    <Kvalue>0</Kvalue>
+    <Rate>0</Rate>
+    <RateEquationDenominator></RateEquationDenominator>
+    <RateEquationNumerator></RateEquationNumerator>
+    <ReactionGibbsEnergy>-191486.666666667</ReactionGibbsEnergy>
+    <Tmax>2000</Tmax>
+    <Tmin>0</Tmin>
+    <VelUnit></VelUnit>
+    <ReactionKinFwdType>Arrhenius</ReactionKinFwdType>
+    <ReactionKinRevType>Arrhenius</ReactionKinRevType>
+    <ReactionKinFwdExpression></ReactionKinFwdExpression>
+    <ReactionKinRevExpression></ReactionKinRevExpression>
+    <E_Forward_Unit>J/mol</E_Forward_Unit>
+    <E_Reverse_Unit>J/mol</E_Reverse_Unit>
+    <ReactionKinetics>Expression</ReactionKinetics>
+    <ScriptTitle></ScriptTitle>
+    <EquilibriumReactionBasisUnits>Pa</EquilibriumReactionBasisUnits>
+    <Compounds>
+      <Compound Name="Methane" StoichCoeff="-3" DirectOrder="0" ReverseOrder="0" IsBaseReactant="true" />
+      <Compound Name="Hydrogen" StoichCoeff="8" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Oxygen" StoichCoeff="-2" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Water" StoichCoeff="-2" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+      <Compound Name="Carbon dioxide" StoichCoeff="3" DirectOrder="0" ReverseOrder="0" IsBaseReactant="false" />
+    </Compounds>
+  </Reaction>
+</DWSIM_Reaction_Data>
