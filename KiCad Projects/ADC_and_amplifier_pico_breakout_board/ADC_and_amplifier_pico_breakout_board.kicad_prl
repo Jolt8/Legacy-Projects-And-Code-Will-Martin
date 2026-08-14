@@ -33,6 +33,7 @@
       "vias",
       "footprint_text",
       "footprint_anchors",
+      "ratsnest",
       "grid",
       "footprints_front",
       "footprints_back",
@@ -62,7 +63,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "18V Tomography Board.kicad_prl",
+    "filename": "ADC_and_amplifier_pico_breakout_board.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
@@ -93,12 +94,12 @@
     "col_widths": [
       162,
       147,
-      91,
-      67,
-      91,
-      91,
-      91,
-      71,
+      113,
+      92,
+      98,
+      115,
+      100,
+      98,
       91,
       91
     ],
