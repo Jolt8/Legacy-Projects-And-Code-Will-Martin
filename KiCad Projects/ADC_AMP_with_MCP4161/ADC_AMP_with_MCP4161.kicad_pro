@@ -506,7 +506,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "ADC_and_amplifier_pico_breakout_board.kicad_pro",
+    "filename": "ADC_AMP_with_MCP4161.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -716,8 +716,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "ADC_and_amplifier_pico_breakout_board.kicad_sch",
-        "name": "ADC_and_amplifier_pico_breakout_board",
+        "filename": "ADC_AMP_with_MCP4161.kicad_sch",
+        "name": "ADC_AMP_with_MCP4161",
         "uuid": "8ecf61f3-91a2-40b2-9601-c3a56e620970"
       }
     ],
@@ -727,7 +727,7 @@
   "sheets": [
     [
       "8ecf61f3-91a2-40b2-9601-c3a56e620970",
-      "ADC_and_amplifier_pico_breakout_board"
+      "ADC_AMP_with_MCP4161"
     ]
   ],
   "text_variables": {},

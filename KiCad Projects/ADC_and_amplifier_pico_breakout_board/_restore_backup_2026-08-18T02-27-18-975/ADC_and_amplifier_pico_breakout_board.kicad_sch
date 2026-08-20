@@ -1144,129 +1144,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -3794,7 +3671,7 @@
 					)
 				)
 			)
-			(property "Footprint" "SMA_KWE:SMA_KWE"
+			(property "Footprint" ""
 				(at 8.636 -16.764 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3867,6 +3744,89 @@
 				(polyline
 					(pts
 						(xy 5.08 -5.08) (xy 12.7 -5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 7.62 -2.54)
+					(radius 0.127)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 0) (xy 8.89 0.8467)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 0) (xy 8.89 -0.8467)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -2.54) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -2.54) (xy 8.89 -1.6933)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -2.54) (xy 8.89 -3.3867)
 					)
 					(stroke
 						(width 0.127)
@@ -4708,7 +4668,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ul_SN74AHCT125DRG4:SN74AHCT125DRG4"
+		(symbol "ul_74AHCT125D-118:74AHCT125D_118"
 			(pin_names
 				(offset 0.254)
 			)
@@ -4718,7 +4678,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at 20.828 10.16 0)
+				(at 20.32 10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -4727,8 +4687,8 @@
 					)
 				)
 			)
-			(property "Value" "SN74AHCT125DRG4"
-				(at 20.828 7.62 0)
+			(property "Value" "74AHCT125D_118"
+				(at 20.32 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -4737,8 +4697,8 @@
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 20.574 -22.098 0)
+			(property "Footprint" "SO14_SOT108-1_NEX"
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -4749,7 +4709,7 @@
 					)
 				)
 			)
-			(property "Datasheet" ""
+			(property "Datasheet" "74AHCT125D_118"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4782,7 +4742,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "SN74AHCT125DRG4"
+			(property "ki_keywords" "74AHCT125D,118"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4793,7 +4753,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "D14_TEX D14_TEX-M D14_TEX-L"
+			(property "ki_fp_filters" "SO14_SOT108-1_NEX SO14_SOT108-1_NEX-M SO14_SOT108-1_NEX-L"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4804,7 +4764,7 @@
 					)
 				)
 			)
-			(symbol "SN74AHCT125DRG4_0_1"
+			(symbol "74AHCT125D_118_0_1"
 				(polyline
 					(pts
 						(xy 7.62 5.08) (xy 7.62 -20.32)
@@ -4856,7 +4816,7 @@
 				(pin input line
 					(at 0 0 0)
 					(length 7.62)
-					(name "*1OE"
+					(name "1OE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4889,7 +4849,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin output line
 					(at 0 -5.08 0)
 					(length 7.62)
 					(name "1Y"
@@ -4910,7 +4870,7 @@
 				(pin input line
 					(at 0 -7.62 0)
 					(length 7.62)
-					(name "*2OE"
+					(name "2OE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4943,7 +4903,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin output line
 					(at 0 -12.7 0)
 					(length 7.62)
 					(name "2Y"
@@ -4961,7 +4921,7 @@
 						)
 					)
 				)
-				(pin power_in line
+				(pin power_out line
 					(at 0 -15.24 0)
 					(length 7.62)
 					(name "GND"
@@ -4979,7 +4939,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin output line
 					(at 40.64 -15.24 180)
 					(length 7.62)
 					(name "3Y"
@@ -5018,7 +4978,7 @@
 				(pin input line
 					(at 40.64 -10.16 180)
 					(length 7.62)
-					(name "*3OE"
+					(name "3OE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5033,7 +4993,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin output line
 					(at 40.64 -7.62 180)
 					(length 7.62)
 					(name "4Y"
@@ -5072,7 +5032,7 @@
 				(pin input line
 					(at 40.64 -2.54 180)
 					(length 7.62)
-					(name "*4OE"
+					(name "4OE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5276,12 +5236,6 @@
 		(uuid "03612678-84b6-416a-a7f7-052140f42f1b")
 	)
 	(junction
-		(at 482.6 643.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "05316762-0363-4f5a-a5dc-45362b1d4544")
-	)
-	(junction
 		(at 610.87 651.4565)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5292,12 +5246,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1444d0ae-f690-42dc-a6de-4a6ccb6ca9f8")
-	)
-	(junction
-		(at 511.81 610.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "17089772-d33f-41f8-a533-4c4df018357b")
 	)
 	(junction
 		(at 373.38 547.37)
@@ -5316,12 +5264,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2ccbfdc3-633e-451d-83de-c12daa77c862")
-	)
-	(junction
-		(at 388.62 678.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "39c07f14-08ab-458b-9927-8628d9272587")
 	)
 	(junction
 		(at 662.94 669.29)
@@ -5346,12 +5288,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "589f1482-7fdf-4460-be52-1468bbcedf8c")
-	)
-	(junction
-		(at 393.7 562.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "626c5907-086c-4f7d-820d-2ca39cb35754")
 	)
 	(junction
 		(at 391.16 589.28)
@@ -5384,7 +5320,7 @@
 		(uuid "7fd3b51f-347a-436b-8a02-bcc02d288bba")
 	)
 	(junction
-		(at 563.88 411.48)
+		(at 554.99 411.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8778e40c-1b6d-4e81-91bf-db9d2e355fd8")
@@ -5400,12 +5336,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "92d565f5-ad1d-48c0-b050-62ace0f20d10")
-	)
-	(junction
-		(at 610.87 640.08)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9468a293-df05-48fb-ba85-8ee7f2095c39")
 	)
 	(junction
 		(at 601.98 626.11)
@@ -5424,12 +5354,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a0404d89-f82f-49ad-bfd9-fd9d9f2afddf")
-	)
-	(junction
-		(at 332.74 636.27)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a81f743d-35ec-4abf-ba4c-1b2ca65dbdf2")
 	)
 	(junction
 		(at 598.17 636.27)
@@ -5456,18 +5380,6 @@
 		(uuid "b48b7526-e494-4d13-a5dc-4a264333ed77")
 	)
 	(junction
-		(at 415.29 600.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b928c50a-230e-4385-b582-6652f904dada")
-	)
-	(junction
-		(at 391.16 631.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bb571b16-3881-43b9-af55-a32296998563")
-	)
-	(junction
 		(at 419.1 615.95)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5490,6 +5402,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "daa8e7f3-279c-4dd1-8ae3-c866a98b0cec")
+	)
+	(junction
+		(at 461.01 445.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e9dd8aca-4b06-40b2-a41b-4b63860a6274")
 	)
 	(junction
 		(at 388.62 656.59)
@@ -5571,16 +5489,6 @@
 	)
 	(wire
 		(pts
-			(xy 391.16 631.19) (xy 393.7 631.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05269db6-6605-4013-b5e0-12a1ba46b4e4")
-	)
-	(wire
-		(pts
 			(xy 415.29 626.11) (xy 415.29 613.41)
 		)
 		(stroke
@@ -5638,16 +5546,6 @@
 			(type default)
 		)
 		(uuid "0a68b0bb-626f-4788-8183-fd625afb587d")
-	)
-	(wire
-		(pts
-			(xy 415.29 600.71) (xy 419.1 600.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0b5a6223-c60f-49d9-baa7-506a75dacfeb")
 	)
 	(wire
 		(pts
@@ -5718,16 +5616,6 @@
 			(type default)
 		)
 		(uuid "166f2080-2174-4af7-aa3c-644896a56a8d")
-	)
-	(wire
-		(pts
-			(xy 332.74 636.27) (xy 350.52 636.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "16bff9f2-2fc1-4e9c-b570-888b66a2ae23")
 	)
 	(wire
 		(pts
@@ -5931,7 +5819,7 @@
 	)
 	(wire
 		(pts
-			(xy 391.16 626.11) (xy 391.16 631.19)
+			(xy 391.16 626.11) (xy 391.16 633.73)
 		)
 		(stroke
 			(width 0)
@@ -5978,16 +5866,6 @@
 			(type default)
 		)
 		(uuid "3c43b587-06cc-41e9-ba71-dbad9ba4b317")
-	)
-	(wire
-		(pts
-			(xy 415.29 600.71) (xy 415.29 610.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c5a6714-a832-4d52-8ef7-d66fc51b03ab")
 	)
 	(wire
 		(pts
@@ -6111,7 +5989,7 @@
 	)
 	(wire
 		(pts
-			(xy 610.87 636.27) (xy 610.87 640.08)
+			(xy 610.87 636.27) (xy 610.87 651.4565)
 		)
 		(stroke
 			(width 0)
@@ -6191,7 +6069,7 @@
 	)
 	(wire
 		(pts
-			(xy 388.62 666.75) (xy 388.62 678.18)
+			(xy 388.62 666.75) (xy 388.62 704.85)
 		)
 		(stroke
 			(width 0)
@@ -6251,16 +6129,6 @@
 	)
 	(wire
 		(pts
-			(xy 393.7 562.61) (xy 398.78 562.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60251650-fab9-4fd8-bf82-1e0ea09132fb")
-	)
-	(wire
-		(pts
 			(xy 494.03 626.11) (xy 494.03 415.29)
 		)
 		(stroke
@@ -6271,16 +6139,6 @@
 	)
 	(wire
 		(pts
-			(xy 393.7 562.61) (xy 393.7 572.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "66edf514-d6c1-4c05-8d1b-37498c2ce609")
-	)
-	(wire
-		(pts
 			(xy 364.49 610.87) (xy 369.57 610.87)
 		)
 		(stroke
@@ -6288,16 +6146,6 @@
 			(type default)
 		)
 		(uuid "69f7a7f4-3e1f-40c5-a096-46c32eff3a38")
-	)
-	(wire
-		(pts
-			(xy 482.6 643.89) (xy 514.35 643.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c123d7e-3ac6-4b8c-bc64-ebf3f025fb4e")
 	)
 	(wire
 		(pts
@@ -6331,7 +6179,7 @@
 	)
 	(wire
 		(pts
-			(xy 563.88 411.48) (xy 563.88 415.29)
+			(xy 554.99 411.48) (xy 554.99 415.29)
 		)
 		(stroke
 			(width 0)
@@ -6421,7 +6269,7 @@
 	)
 	(wire
 		(pts
-			(xy 563.88 397.51) (xy 563.88 394.97)
+			(xy 554.99 397.51) (xy 554.99 394.97)
 		)
 		(stroke
 			(width 0)
@@ -6711,16 +6559,6 @@
 	)
 	(wire
 		(pts
-			(xy 430.53 509.27) (xy 433.07 509.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a19724b9-9c6d-4dbc-84be-b084ec9752f1")
-	)
-	(wire
-		(pts
 			(xy 351.79 623.57) (xy 351.79 645.16)
 		)
 		(stroke
@@ -6831,16 +6669,6 @@
 	)
 	(wire
 		(pts
-			(xy 610.87 640.08) (xy 610.87 651.4565)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae6efeef-99e6-4550-b827-6a36fefe3576")
-	)
-	(wire
-		(pts
 			(xy 585.47 628.65) (xy 598.17 628.65)
 		)
 		(stroke
@@ -6911,17 +6739,7 @@
 	)
 	(wire
 		(pts
-			(xy 511.81 610.87) (xy 514.35 610.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1d83427-f683-46f8-be5a-be208b85b636")
-	)
-	(wire
-		(pts
-			(xy 563.88 394.97) (xy 551.18 394.97)
+			(xy 554.99 394.97) (xy 551.18 394.97)
 		)
 		(stroke
 			(width 0)
@@ -6931,23 +6749,13 @@
 	)
 	(wire
 		(pts
-			(xy 307.34 636.27) (xy 332.74 636.27)
+			(xy 307.34 636.27) (xy 350.52 636.27)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c3b7b156-0087-4366-b475-e2ad5eb90067")
-	)
-	(wire
-		(pts
-			(xy 388.62 678.18) (xy 393.7 678.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c6b75a2f-e487-4c6f-b71a-f251c6a3f3a9")
 	)
 	(wire
 		(pts
@@ -6988,16 +6796,6 @@
 			(type default)
 		)
 		(uuid "ce971607-41f5-4088-b1de-c10094e4c170")
-	)
-	(wire
-		(pts
-			(xy 388.62 678.18) (xy 388.62 704.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cf51950d-cac4-4570-8b7d-104c1de47f9a")
 	)
 	(wire
 		(pts
@@ -7131,7 +6929,7 @@
 	)
 	(wire
 		(pts
-			(xy 415.29 591.82) (xy 415.29 600.71)
+			(xy 415.29 591.82) (xy 415.29 610.87)
 		)
 		(stroke
 			(width 0)
@@ -7201,7 +6999,7 @@
 	)
 	(wire
 		(pts
-			(xy 501.65 610.87) (xy 511.81 610.87)
+			(xy 501.65 610.87) (xy 514.35 610.87)
 		)
 		(stroke
 			(width 0)
@@ -7241,7 +7039,7 @@
 	)
 	(wire
 		(pts
-			(xy 563.88 405.13) (xy 563.88 411.48)
+			(xy 554.99 405.13) (xy 554.99 411.48)
 		)
 		(stroke
 			(width 0)
@@ -7361,33 +7159,13 @@
 	)
 	(wire
 		(pts
-			(xy 393.7 558.8) (xy 393.7 562.61)
+			(xy 393.7 558.8) (xy 393.7 572.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f51f6a22-3025-4fa2-8097-c95553fada9f")
-	)
-	(wire
-		(pts
-			(xy 391.16 631.19) (xy 391.16 633.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6f5dadf-ec34-4f53-b8ec-b0cd6fc0124a")
-	)
-	(wire
-		(pts
-			(xy 610.87 640.08) (xy 613.41 640.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7ce0cf0-4415-4bdd-bc96-9a45554ee130")
 	)
 	(wire
 		(pts
@@ -7615,85 +7393,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 594.36 662.94 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "05f8d96e-f3cd-43dc-9c85-cdb8cbcf441f")
-		(property "Reference" "TP11"
-			(at 596.9 658.3679 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ADC 2.5V"
-			(at 596.9 660.9079 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 599.44 662.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 599.44 662.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 594.36 662.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fb63d50e-a03b-4ca3-b466-27b829054162")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 377.19 532.13 270)
 		(unit 1)
@@ -7767,85 +7466,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "R13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 353.06 600.71 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0706cdc9-881f-45ca-97e2-2eca40381b95")
-		(property "Reference" "TP8"
-			(at 355.6 596.1379 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "DIGIPOT_2.5V"
-			(at 355.6 598.6779 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 358.14 600.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 358.14 600.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 353.06 600.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dbf19f0c-560d-4e3e-8a68-6082fdcee05b")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -8090,7 +7710,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 567.69 411.48 90)
+		(at 558.8 411.48 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8100,7 +7720,7 @@
 		(dnp no)
 		(uuid "0955fd30-3b69-44cd-8c32-74dd458f60e8")
 		(property "Reference" "C20"
-			(at 570.23 407.924 90)
+			(at 561.34 407.924 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8111,7 +7731,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 570.23 405.384 90)
+			(at 561.34 405.384 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8122,7 +7742,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 571.5 410.5148 0)
+			(at 562.61 410.5148 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8133,7 +7753,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 567.69 411.48 0)
+			(at 558.8 411.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8144,7 +7764,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 567.69 411.48 0)
+			(at 558.8 411.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8489,7 +8109,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 563.88 415.29 180)
+		(at 554.99 415.29 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8499,7 +8119,7 @@
 		(dnp no)
 		(uuid "0f53d1c1-5079-4b90-9d09-3670032e6824")
 		(property "Reference" "#PWR049"
-			(at 563.88 411.48 0)
+			(at 554.99 411.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8510,7 +8130,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 561.594 419.1 0)
+			(at 552.704 419.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8521,7 +8141,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 563.88 415.29 0)
+			(at 554.99 415.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8532,7 +8152,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 563.88 415.29 0)
+			(at 554.99 415.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8543,7 +8163,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 563.88 415.29 0)
+			(at 554.99 415.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8717,84 +8337,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "#PWR015")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 551.18 412.75 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "12388fef-162d-405b-af8b-fcde4e1bc5c7")
-		(property "Reference" "#PWR064"
-			(at 557.53 412.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 554.99 412.75 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 551.18 412.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 551.18 412.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 551.18 412.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7dbbdb04-14e7-4768-9b18-c84ff5483d71")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR064")
 					(unit 1)
 				)
 			)
@@ -9037,164 +8579,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 482.6 643.89 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1751cfcd-bf1c-473a-bb3f-72d593b687d6")
-		(property "Reference" "TP10"
-			(at 485.14 639.3179 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ADC OTR"
-			(at 485.14 641.8579 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 487.68 643.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 487.68 643.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 482.6 643.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a9d242a5-cc73-45c8-ad88-2a1673a2f459")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 551.18 450.85 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "18238fde-d0b7-45ca-877c-7d5e8fc85d99")
-		(property "Reference" "#PWR061"
-			(at 557.53 450.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 554.99 450.8499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 551.18 450.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 551.18 450.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 551.18 450.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "58b40ff4-0e16-4e5b-85a7-0cd6c7091a71")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR061")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 398.78 585.47 0)
 		(unit 1)
@@ -9352,7 +8736,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 467.36 643.89 0)
+		(at 499.11 643.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9363,7 +8747,7 @@
 		(fields_autoplaced yes)
 		(uuid "1e583912-21ed-4166-95a8-4d9de19436db")
 		(property "Reference" "#PWR08"
-			(at 467.36 650.24 0)
+			(at 499.11 650.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9374,7 +8758,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 467.36 648.97 0)
+			(at 499.11 648.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9384,7 +8768,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 467.36 643.89 0)
+			(at 499.11 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9395,7 +8779,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 467.36 643.89 0)
+			(at 499.11 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9406,7 +8790,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 467.36 643.89 0)
+			(at 499.11 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9430,7 +8814,7 @@
 	)
 	(symbol
 		(lib_id "Device:FerriteBead")
-		(at 563.88 401.32 0)
+		(at 554.99 401.32 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9441,7 +8825,7 @@
 		(fields_autoplaced yes)
 		(uuid "1f15d3ad-4822-464b-8dcd-979bd9cd290f")
 		(property "Reference" "FB1"
-			(at 567.69 399.9991 0)
+			(at 558.8 399.9991 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9452,7 +8836,7 @@
 			)
 		)
 		(property "Value" "FerriteBead"
-			(at 567.69 402.5391 0)
+			(at 558.8 402.5391 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9463,7 +8847,7 @@
 			)
 		)
 		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
-			(at 562.102 401.32 90)
+			(at 553.212 401.32 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9474,7 +8858,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 563.88 401.32 0)
+			(at 554.99 401.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9485,7 +8869,7 @@
 			)
 		)
 		(property "Description" "Ferrite bead"
-			(at 563.88 401.32 0)
+			(at 554.99 401.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9505,203 +8889,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "FB1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ul_SN74AHCT125DRG4:SN74AHCT125DRG4")
-		(at 266.7 621.03 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1fabbcf7-f15a-492c-8ade-747302230c88")
-		(property "Reference" "U2"
-			(at 287.02 610.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "SN74AHCT125DRG4"
-			(at 287.02 613.41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "ul_SN74AHCT125DRG4:D14_TEX"
-			(at 287.274 643.128 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 266.7 621.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 266.7 621.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "10"
-			(uuid "6f5f7a69-166f-406e-98c7-614fd4d59cd3")
-		)
-		(pin "3"
-			(uuid "a5b9f2c4-b5d2-4e80-b94f-d1764d39269b")
-		)
-		(pin "1"
-			(uuid "6b3a8cb7-ee16-431f-bcd3-95672cff27d7")
-		)
-		(pin "5"
-			(uuid "f084033d-a19f-46b8-8fb1-8b2e2601efff")
-		)
-		(pin "7"
-			(uuid "ebfba5e6-3609-48cc-9f7a-515985a07555")
-		)
-		(pin "8"
-			(uuid "53cec17c-452c-4a0a-887b-dae5679aff67")
-		)
-		(pin "14"
-			(uuid "8aba7bda-330f-4d36-98e4-68b76093f482")
-		)
-		(pin "2"
-			(uuid "c1b71db9-2579-4be6-ace8-be97cc2dd627")
-		)
-		(pin "4"
-			(uuid "3ea43243-fc17-4118-bd03-81937d532e1f")
-		)
-		(pin "13"
-			(uuid "ef27b918-8bfc-429a-a602-3be6edfd8760")
-		)
-		(pin "12"
-			(uuid "79c15644-cc36-431e-8d96-7d39778561bd")
-		)
-		(pin "11"
-			(uuid "bda72fe4-a2a4-430e-9278-dc99adde2117")
-		)
-		(pin "6"
-			(uuid "d6c8e4ba-a4ac-4561-ac99-f90d4d896925")
-		)
-		(pin "9"
-			(uuid "cbd69e0c-6090-41ad-8d3d-2e3f2636b378")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 514.35 450.85 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "21a9ea8c-3519-42c8-86cc-0c8b26f50649")
-		(property "Reference" "#PWR058"
-			(at 508 450.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 510.54 450.8499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 514.35 450.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 514.35 450.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 514.35 450.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bc269211-5c42-4b52-ad75-0f10ee6538b8")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR058")
 					(unit 1)
 				)
 			)
@@ -10726,7 +9913,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 478.79 643.89 0)
+		(at 510.54 643.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10737,7 +9924,7 @@
 		(fields_autoplaced yes)
 		(uuid "37392785-30e1-48e7-969f-8ea7971c6df6")
 		(property "Reference" "D3"
-			(at 477.2025 637.54 0)
+			(at 508.9525 637.54 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10747,7 +9934,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 477.2025 640.08 0)
+			(at 508.9525 640.08 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10757,7 +9944,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 478.79 643.89 0)
+			(at 510.54 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10768,7 +9955,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 478.79 643.89 0)
+			(at 510.54 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10779,7 +9966,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 478.79 643.89 0)
+			(at 510.54 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10790,7 +9977,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 478.79 643.89 0)
+			(at 510.54 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10968,85 +10155,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 613.41 640.08 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3df121b7-bbab-4616-b1fe-86f91cb3aafe")
-		(property "Reference" "TP12"
-			(at 615.95 635.5079 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ADC VREF"
-			(at 615.95 638.0479 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 618.49 640.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 618.49 640.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 613.41 640.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5f877afe-d8d2-4d38-88b5-b4e21285fa02")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -11531,243 +10639,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "C8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 511.81 610.87 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "500e7221-93ec-48bf-ac86-4acb6ee45374")
-		(property "Reference" "TP13"
-			(at 514.35 606.2979 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ADC_CLK"
-			(at 514.35 608.8379 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 516.89 610.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 516.89 610.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 511.81 610.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a2ad27de-68dc-4e77-8309-dd151b7d0dde")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 551.18 400.05 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "570e25dc-547b-45c3-b7d0-d7ed09f2c2d2")
-		(property "Reference" "#PWR065"
-			(at 557.53 400.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 554.99 400.0499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 551.18 400.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 551.18 400.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 551.18 400.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0461f569-46e8-4c1f-b690-c648d51d775a")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR065")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 514.35 463.55 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5a3e5d46-cbbb-4361-8d65-f51aabcce362")
-		(property "Reference" "#PWR059"
-			(at 508 463.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 510.54 463.5499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 514.35 463.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 514.35 463.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 514.35 463.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5020611c-fad5-4da3-a9c4-6e3894ba45a1")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR059")
 					(unit 1)
 				)
 			)
@@ -12293,85 +11164,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 514.35 400.05 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6b3482f0-81e2-4910-ae5f-78b7e4b67208")
-		(property "Reference" "#PWR054"
-			(at 508 400.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 510.54 400.0499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 514.35 400.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 514.35 400.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 514.35 400.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6d94534b-594b-452e-8ac9-25d4ef9dad54")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR054")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 342.9 600.71 0)
 		(unit 1)
@@ -12444,85 +11236,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 551.18 425.45 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7081e49c-7ea1-4a7b-b3a2-52559e5b06b1")
-		(property "Reference" "#PWR063"
-			(at 557.53 425.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 554.99 425.4499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 551.18 425.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 551.18 425.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 551.18 425.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "03b98e09-f7dd-47dd-abc7-acbebdd3459a")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -12608,163 +11321,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 415.29 500.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "763df541-85cb-44da-a9f0-113e524fae7e")
-		(property "Reference" "#PWR068"
-			(at 415.29 506.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 415.29 505.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 415.29 500.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 415.29 500.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 415.29 500.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "425f2939-556c-48ff-be10-cec3c5690010")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR068")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 393.7 678.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7a877a78-3892-4cc2-ac7e-36abb2c19fa1")
-		(property "Reference" "TP4"
-			(at 396.24 673.6079 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AMP2_OUT"
-			(at 396.24 676.1479 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 398.78 678.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 398.78 678.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 393.7 678.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "abab499f-f346-450b-8839-31035990279b")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_name "R_1")
 		(lib_id "Device:R")
 		(at 373.38 554.99 0)
@@ -12842,85 +11398,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 393.7 631.19 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7fa804c6-e44f-4ae1-b78f-7885a61520f2")
-		(property "Reference" "TP3"
-			(at 396.24 626.6179 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AMP2_IN"
-			(at 396.24 629.1579 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 398.78 631.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 398.78 631.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 393.7 631.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "07600749-99c8-416a-a825-8936ed50972e")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -13077,85 +11554,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 514.35 438.15 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "85170104-dbe9-4926-b5dc-b09a0c868a36")
-		(property "Reference" "#PWR057"
-			(at 508 438.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 510.54 438.1499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 514.35 438.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 514.35 438.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 514.35 438.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "47813aed-121e-40cf-ad62-20ff862d3f36")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR057")
 					(unit 1)
 				)
 			)
@@ -13482,85 +11880,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 551.18 463.55 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8d61bb10-4b7d-49c9-8995-7d04c70d9cd6")
-		(property "Reference" "#PWR060"
-			(at 557.53 463.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 554.99 463.5499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 551.18 463.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 551.18 463.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 551.18 463.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cbdcc52e-ab83-4916-a67c-312ed02f2eaa")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR060")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 640.08 642.62 90)
 		(unit 1)
@@ -13719,85 +12038,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 373.38 532.13 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8eb472a4-8fb5-4b39-ac15-bfac75710949")
-		(property "Reference" "TP9"
-			(at 375.92 527.5579 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SIG_2.5V"
-			(at 375.92 530.0979 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 378.46 532.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 378.46 532.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 373.38 532.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5bc34778-74fd-4bf4-a94e-72996b1645c9")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:FerriteBead")
 		(at 464.82 445.77 90)
 		(unit 1)
@@ -13872,85 +12112,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "FB2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 415.29 510.54 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "92cedb00-db3e-4700-a7a3-56b36565edbf")
-		(property "Reference" "TP6"
-			(at 417.83 505.9679 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TP_GND2"
-			(at 417.83 508.5079 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 420.37 510.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 420.37 510.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 415.29 510.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a884b1a5-ef45-45b1-aca2-5f0ffc5568f0")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -14687,85 +12848,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 551.18 438.15 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b3369bf4-7350-4421-85e6-2137ac2d8109")
-		(property "Reference" "#PWR062"
-			(at 557.53 438.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 554.99 438.1499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 551.18 438.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 551.18 438.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 551.18 438.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0e2aa5d7-5bac-48a8-8be3-dc7c241fc912")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR062")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 608.33 689.61 0)
 		(unit 1)
@@ -14921,85 +13003,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "#PWR031")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 419.1 600.71 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b862ac72-7189-49ed-bf33-f18c1582aa75")
-		(property "Reference" "TP2"
-			(at 421.64 596.1379 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "AMP1_OUT"
-			(at 421.64 598.6779 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 424.18 600.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 424.18 600.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 419.1 600.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bea5db52-f8de-4ce4-a2ee-a2a0a824b4e6")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -15236,85 +13239,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 415.29 500.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c62e7756-a119-4907-bf16-ed17a05df0f2")
-		(property "Reference" "TP5"
-			(at 417.83 495.8079 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TP_GND1"
-			(at 417.83 498.3479 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 420.37 500.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 420.37 500.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 415.29 500.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c1850e86-560d-4e45-b276-986826df778a")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -15628,85 +13552,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "#PWR023")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 514.35 412.75 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cc36fac3-e1a9-4431-adc0-bc118b1af6b5")
-		(property "Reference" "#PWR055"
-			(at 508 412.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 510.54 412.7499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 514.35 412.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 514.35 412.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 514.35 412.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e60aab19-c38f-4402-9097-1c49f657ec8d")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -16110,85 +13955,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 332.74 636.27 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d52d1c67-de62-4bf1-bfaa-927f52623ff6")
-		(property "Reference" "TP1"
-			(at 335.28 631.6979 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SPI_CS"
-			(at 335.28 634.2379 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 337.82 636.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 337.82 636.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 332.74 636.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "050bebd3-1c62-4045-9df6-8c7e6746e2e8")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 353.06 615.95 0)
 		(unit 1)
@@ -16423,6 +14189,124 @@
 		)
 	)
 	(symbol
+		(lib_id "ul_74AHCT125D-118:74AHCT125D_118")
+		(at 266.7 621.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "da5e7ff8-612b-4ae4-a6d9-fee4765dc9be")
+		(property "Reference" "U2"
+			(at 287.02 610.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "74AHCT125D_118"
+			(at 287.02 613.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "SO14_SOT108-1_NEX"
+			(at 266.7 621.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "74AHCT125D_118"
+			(at 266.7 621.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 266.7 621.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "7"
+			(uuid "d25b1c0d-60e1-4511-9ce1-4d3deb78a56d")
+		)
+		(pin "13"
+			(uuid "9eea38dd-773f-4752-81b8-6c524b752aa3")
+		)
+		(pin "6"
+			(uuid "24917cb5-8a9d-4617-9134-4b74e7e0b908")
+		)
+		(pin "8"
+			(uuid "9247e4c2-4722-4707-a98c-8c3160674523")
+		)
+		(pin "9"
+			(uuid "c896e56f-dd2e-4756-9bfe-590c8cdfb2d2")
+		)
+		(pin "2"
+			(uuid "eb55faac-3624-4275-9c55-c2dc8dd0aee8")
+		)
+		(pin "4"
+			(uuid "b8ed229e-463c-4567-b885-77be67a85020")
+		)
+		(pin "14"
+			(uuid "a45c6445-f217-4953-94b4-7d08791ff85f")
+		)
+		(pin "5"
+			(uuid "eeeb12d1-d75a-4ae9-9cba-f1f5d17e8055")
+		)
+		(pin "3"
+			(uuid "808ce648-f9c5-4f6f-9178-ed03e997c06f")
+		)
+		(pin "10"
+			(uuid "0d747bd7-f0f7-41d3-b805-8f35bcabb9da")
+		)
+		(pin "1"
+			(uuid "016c8c33-a687-4482-b2a3-ff4626ff9631")
+		)
+		(pin "11"
+			(uuid "a82202ed-2d9a-48b9-9fd8-9b3f1b8d500a")
+		)
+		(pin "12"
+			(uuid "b940c96c-f066-4dff-90bc-30bcec41f99f")
+		)
+		(instances
+			(project "ADC_and_amplifier_pico_breakout_board"
+				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 353.06 612.14 180)
 		(unit 1)
@@ -16498,84 +14382,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "C10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 415.29 510.54 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "decd388e-a8b0-4f34-a979-15dd2eb717bb")
-		(property "Reference" "#PWR066"
-			(at 415.29 516.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 415.29 515.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 415.29 510.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 415.29 510.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 415.29 510.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3aa53d6d-2bf1-4d4a-bd0c-db3d6134386c")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR066")
 					(unit 1)
 				)
 			)
@@ -16742,7 +14548,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 571.5 411.48 0)
+		(at 562.61 411.48 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16753,7 +14559,7 @@
 		(fields_autoplaced yes)
 		(uuid "e30bca00-1e54-4aa6-8929-202831fe612f")
 		(property "Reference" "#PWR051"
-			(at 571.5 417.83 0)
+			(at 562.61 417.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16764,7 +14570,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 571.5 416.56 0)
+			(at 562.61 416.56 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16774,7 +14580,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 571.5 411.48 0)
+			(at 562.61 411.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16785,7 +14591,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 571.5 411.48 0)
+			(at 562.61 411.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16796,7 +14602,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 571.5 411.48 0)
+			(at 562.61 411.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17063,8 +14869,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 433.07 509.27 0)
+		(lib_id "Device:C")
+		(at 461.01 449.58 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17072,32 +14878,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e6594ffd-fba2-4c9d-a82f-2db33e6a0e12")
-		(property "Reference" "TP7"
-			(at 435.61 504.6979 0)
+		(uuid "e626b214-e1e4-46a4-99cb-ce9e44307ac3")
+		(property "Reference" "C21"
+			(at 457.708 450.596 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "5VA"
-			(at 435.61 507.2379 0)
+		(property "Value" "100nF"
+			(at 457.708 448.056 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 438.15 509.27 0)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 461.9752 453.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17108,7 +14913,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 438.15 509.27 0)
+			(at 461.01 449.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17118,8 +14923,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 433.07 509.27 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 461.01 449.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17128,14 +14933,17 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "2"
+			(uuid "002e9bef-7f03-48c7-9696-003d31b16bb9")
 		)
 		(pin "1"
-			(uuid "8a12b8fc-d23c-4aa6-98c4-2e61d17b5c3d")
+			(uuid "f431e607-fb43-4c5b-87e6-8d0244adc3d7")
 		)
 		(instances
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP7")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -17222,7 +15030,7 @@
 	(symbol
 		(lib_name "R_1")
 		(lib_id "Device:R")
-		(at 471.17 643.89 90)
+		(at 502.92 643.89 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17233,7 +15041,7 @@
 		(fields_autoplaced yes)
 		(uuid "ea61244d-36e4-4209-9b82-943fb560e350")
 		(property "Reference" "R4"
-			(at 471.17 637.54 90)
+			(at 502.92 637.54 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17243,7 +15051,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 471.17 640.08 90)
+			(at 502.92 640.08 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17253,7 +15061,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 471.17 645.668 90)
+			(at 502.92 645.668 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17264,7 +15072,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 471.17 643.89 0)
+			(at 502.92 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17275,7 +15083,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 471.17 643.89 0)
+			(at 502.92 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17295,85 +15103,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 398.78 562.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eba0e44d-18a1-46c6-8a2c-68322dfaf795")
-		(property "Reference" "TP14"
-			(at 401.32 558.0379 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SIG_FILTERED"
-			(at 401.32 560.5779 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm"
-			(at 403.86 562.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 403.86 562.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 398.78 562.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ca36c5b8-6bb7-4214-8efd-7b349afdb5a1")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "TP14")
 					(unit 1)
 				)
 			)
@@ -17531,85 +15260,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "R18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 514.35 425.45 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "effbe6fc-1501-4d1b-b2a0-aeb2f77a7c3c")
-		(property "Reference" "#PWR056"
-			(at 508 425.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 510.54 425.4499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 514.35 425.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 514.35 425.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 514.35 425.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b2722833-435b-4ef1-baca-2a2973cd2e51")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR056")
 					(unit 1)
 				)
 			)
@@ -17858,7 +15508,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 618.49 651.4565 0)
+		(at 618.49 651.4565 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17869,7 +15519,7 @@
 		(fields_autoplaced yes)
 		(uuid "f78ec832-a7b8-48e9-be5d-78266252fbed")
 		(property "Reference" "#PWR050"
-			(at 618.49 657.8065 0)
+			(at 624.84 651.4565 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17880,14 +15530,13 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 621.03 652.7264 0)
+			(at 623.57 651.4565 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -18247,84 +15896,6 @@
 			(project "ADC_and_amplifier_pico_breakout_board"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 430.53 509.27 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f9a65c80-164b-4915-bd09-c21d6a68f789")
-		(property "Reference" "#PWR067"
-			(at 430.53 513.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 430.53 504.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 430.53 509.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 430.53 509.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 430.53 509.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7b978f0c-b08c-4cea-bf55-5ee7ceef09a3")
-		)
-		(instances
-			(project "ADC_and_amplifier_pico_breakout_board"
-				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR067")
 					(unit 1)
 				)
 			)
