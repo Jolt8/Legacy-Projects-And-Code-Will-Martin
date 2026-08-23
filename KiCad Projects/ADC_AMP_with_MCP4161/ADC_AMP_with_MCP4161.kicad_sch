@@ -5464,6 +5464,12 @@
 		(uuid "daa8e7f3-279c-4dd1-8ae3-c866a98b0cec")
 	)
 	(junction
+		(at 585.47 643.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "de379e23-a1e7-47e3-b83b-29608720b1a6")
+	)
+	(junction
 		(at 388.62 656.59)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5810,6 +5816,16 @@
 			(type default)
 		)
 		(uuid "2df688d2-784f-4f95-937e-e4e7c8d8e5ca")
+	)
+	(wire
+		(pts
+			(xy 485.14 448.31) (xy 514.35 448.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f0c6f22-09f8-4207-b9c0-ae7eff51f1d3")
 	)
 	(wire
 		(pts
@@ -6780,6 +6796,16 @@
 			(type default)
 		)
 		(uuid "aedc0b4d-3d6a-4362-ae94-b498d41cb8ce")
+	)
+	(wire
+		(pts
+			(xy 590.55 643.89) (xy 585.47 643.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b38746b1-2002-4921-89b9-018275320a45")
 	)
 	(wire
 		(pts
@@ -9141,6 +9167,84 @@
 			(project "ADC_AMP_with_MCP4161"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "#PWR061")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 585.47 651.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "184dd2ee-9179-4d4e-8ff3-0ec13a5a5e36")
+		(property "Reference" "#PWR069"
+			(at 585.47 657.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 585.47 656.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 585.47 651.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 585.47 651.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 585.47 651.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1a9a8157-6acb-40b7-bbe9-605b6fd5fb89")
+		)
+		(instances
+			(project "ADC_AMP_with_MCP4161"
+				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
@@ -13490,6 +13594,97 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 481.33 448.31 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8dd94293-a6cf-451d-8a1f-0482f0782c93")
+		(property "Reference" "D4"
+			(at 479.7425 441.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 479.7425 444.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 481.33 448.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 481.33 448.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 481.33 448.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 481.33 448.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "244459c3-55bf-43f0-9121-dcc793b6d75c")
+		)
+		(pin "2"
+			(uuid "30e3e7e7-4fa1-4e2a-bd95-50342e307068")
+		)
+		(instances
+			(project "ADC_AMP_with_MCP4161"
+				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 355.6 657.86 0)
 		(unit 1)
@@ -16689,8 +16884,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 461.01 453.39 0)
+		(lib_id "Device:C")
+		(at 585.47 647.7 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16698,30 +16893,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e497435d-68f2-4282-9d49-e582149fc7fb")
-		(property "Reference" "#PWR053"
-			(at 461.01 459.74 0)
-			(hide yes)
+		(uuid "e361602e-492b-48a7-a6fa-77fb35b0469e")
+		(property "Reference" "C21"
+			(at 588.264 646.176 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "GND"
-			(at 461.01 458.47 0)
+		(property "Value" "100nF"
+			(at 588.264 648.716 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 461.01 453.39 0)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 586.4352 651.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16732,7 +16928,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 461.01 453.39 0)
+			(at 585.47 647.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16742,8 +16938,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 461.01 453.39 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 585.47 647.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16752,14 +16948,17 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "2"
+			(uuid "e5aea70b-82f2-4753-bf31-83f2e22069ee")
 		)
 		(pin "1"
-			(uuid "184f11ca-c31a-46a5-ac3e-3c04fa1648b7")
+			(uuid "a6fc5d4b-2e78-4efd-82e1-b55a58e64c0e")
 		)
 		(instances
 			(project "ADC_AMP_with_MCP4161"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
-					(reference "#PWR053")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -17084,6 +17283,84 @@
 			(project "ADC_AMP_with_MCP4161"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 469.9 448.31 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ea30d76e-6542-4ca2-903b-aabfb8b8b38c")
+		(property "Reference" "#PWR053"
+			(at 469.9 454.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 469.9 453.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 469.9 448.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 469.9 448.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 469.9 448.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a2e79708-c4b8-42b3-b170-73f0212112c7")
+		)
+		(instances
+			(project "ADC_AMP_with_MCP4161"
+				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
+					(reference "#PWR053")
 					(unit 1)
 				)
 			)
@@ -17967,7 +18244,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 585.47 643.89 270)
+		(at 590.55 643.89 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17978,7 +18255,7 @@
 		(fields_autoplaced yes)
 		(uuid "f9773d61-27a9-4ebb-9899-e4686a935b72")
 		(property "Reference" "#PWR048"
-			(at 581.66 643.89 0)
+			(at 586.74 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17989,7 +18266,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 589.28 643.8899 90)
+			(at 594.36 643.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18000,7 +18277,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 585.47 643.89 0)
+			(at 590.55 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18011,7 +18288,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 585.47 643.89 0)
+			(at 590.55 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18022,7 +18299,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 585.47 643.89 0)
+			(at 590.55 643.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18195,6 +18472,87 @@
 			(project "ADC_AMP_with_MCP4161"
 				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
 					(reference "#PWR067")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "R_1")
+		(lib_id "Device:R")
+		(at 473.71 448.31 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fb481e05-1042-4eca-b085-d4225fb00e98")
+		(property "Reference" "R15"
+			(at 473.71 441.96 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "470"
+			(at 473.71 444.5 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 473.71 450.088 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 473.71 448.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 473.71 448.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aa2f86b0-d772-4eff-a159-7e07d8824230")
+		)
+		(pin "2"
+			(uuid "189ad69e-7fe6-4ef9-b1bb-12fb8e16c42e")
+		)
+		(instances
+			(project "ADC_AMP_with_MCP4161"
+				(path "/8ecf61f3-91a2-40b2-9601-c3a56e620970"
+					(reference "R15")
 					(unit 1)
 				)
 			)
